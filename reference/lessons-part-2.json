@@ -1,0 +1,823 @@
+{
+  "items": [
+    {
+      "english": "Virgo",
+      "chinese": "處女座（室女座）",
+      "example": "She has a typical Virgo personality, always paying great attention to details and focusing on high-end aesthetic designs.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Gemini",
+      "chinese": "雙子座",
+      "example": "According to the astrology magazine, people born under Gemini are usually very communicative, highly adaptable, and full of wit.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "zodiac / zodiac sign",
+      "chinese": "星座、黃道帶 / 星座標誌",
+      "example": "Before planning their holiday or analyzing their relationship fortune, they love to check their Western zodiac signs and Eastern Bazi elements.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "stereotype",
+      "chinese": "刻板印象",
+      "example": "There is a common stereotype that all English language teachers are incredibly strict, but she proves that educators can be very supportive and grounded.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "controlling",
+      "chinese": "控制欲強的、愛管人的",
+      "example": "In modern relationships, being overly controlling can damage mutual trust, so it is important to give each other enough private space.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "keep everything tidy and clean",
+      "chinese": "愛整潔、把每樣東西收拾得乾乾淨淨",
+      "example": "She prefers a minimalist lifestyle, always working hard to keep everything tidy and clean on her professional desk.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "potential client",
+      "chinese": "潛在客戶",
+      "example": "For freelance educators, delivering a high-quality online presentation is an excellent way to attract potential clients.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "sign a contract",
+      "chinese": "簽署合約、簽合約",
+      "example": "After deep negotiations regarding the teaching modules, the two training centers finally decided to sign a contract.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "business partner",
+      "chinese": "商業合作夥伴",
+      "example": "She values professional ethics deeply, which makes her a highly trusted business partner in the local educational industry.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "foreign company",
+      "chinese": "外資企業、外企",
+      "example": "Achieving a score of 7.5 on the IELTS exam can open up amazing career opportunities if you want to apply for a management role in a foreign company.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "match / fit",
+      "chinese": "契合、匹配、符合",
+      "example": "Your extensive experience in TESOL perfectly matches the qualifications needed for this distance learning master's program.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "main job / part-time job",
+      "chinese": "全職工作 / 兼職工作",
+      "example": "Although her main job is teaching English at a language school, she also takes on freelance consulting as a satisfying part-time job.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "work from home",
+      "chinese": "居家辦公、遠程辦公（常縮寫為 WFH）",
+      "example": "Operating a freelance education business gives her the absolute freedom to work from home and manage her own curriculum schedule.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "improve",
+      "chinese": "提升、改善、提高（常用於技能、語言、能力）",
+      "example": "She designed a special vocabulary tracking system to help her A2-level students improve their language proficiency faster.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "increase",
+      "chinese": "增長、增加（常用於數量、數字、比例）",
+      "example": "The main purpose of this mock test strategy is to increase the number of correct answers in the IELTS reading section.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "suitable for",
+      "chinese": "適合的、適宜的（可完美替代 fit）",
+      "example": "This analytical reading textbook is highly suitable for students who are preparing for advanced post-graduate qualifications.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Mandarin",
+      "chinese": "普通話",
+      "example": "While she delivers her presentations in professional British English, her native language is standard Mandarin.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "strong accent",
+      "chinese": "濃重的口音",
+      "example": "At the beginning of the term, some students had a strong local accent, but they quickly improved after listening to standard audio inputs.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fluently",
+      "chinese": "流利地、流暢地",
+      "example": "Her ultimate goal is to help her students not only pass the IELTS exam but also communicate fluently in a professional British environment.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "comparative",
+      "chinese": "比較級的（adj.）/ 比較級（n.）",
+      "example": "When teaching grammar modules, it is essential to explain how the comparative form differs from the superlative form.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "input / output",
+      "chinese": "（語言的）輸入 / 輸出",
+      "example": "To improve your speaking output, you must first accumulate a large amount of high-quality reading and listening input.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "psychology",
+      "chinese": "心理學",
+      "example": "Understanding educational psychology can help teachers design better motivation strategies for students during their learning plateaus.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "financial",
+      "chinese": "金融的、財政的、財務的",
+      "example": "She regularly reads advanced magazines to keep up with global financial trends and economic updates.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "philosophy",
+      "chinese": "哲學、人生哲學/觀念",
+      "example": "Her teaching philosophy focuses on inspiring students' critical thinking rather than making them memorise phrases mechanically.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "stock market",
+      "chinese": "股市、股票市場",
+      "example": "The analytical report in The Economist provides deep insights into how geopolitical events affect the global stock market.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "attract",
+      "chinese": "吸引",
+      "example": "The premium boutique hotel uses high-aesthetic vintage portraits to attract sophisticated travelers.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "magazine",
+      "chinese": "雜誌",
+      "example": "Instead of digital articles, she prefers reading physical copies of analytical magazines during her weekend coffee time.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "The Economist",
+      "chinese": "《經濟學人》（雜誌名）",
+      "example": "Reading The Economist regularly is an excellent way for advanced students to build sophisticated vocabulary for the IELTS reading test.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "a sense of achievement",
+      "chinese": "滿滿成就感、成就感",
+      "example": "Seeing her students overcome their learning plateaus and speak English fluently gives her a strong sense of achievement.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "hyperbole",
+      "chinese": "誇張、誇張修辭手法",
+      "example": "Saying \"I have a million things to do today\" is a classic example of hyperbole that we use frequently in daily spoken English.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "hand in work",
+      "chinese": "提交工作成果、交作業",
+      "example": "Freelance educators usually require their graduate school applicants to hand in their personal statements before the weekend deadline.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "strike up cooperation",
+      "chinese": "開展合作、建立合作關係",
+      "example": "The local training center managed to strike up cooperation with a premium distance learning institution in the UK.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fall through",
+      "chinese": "（合作、計劃）落空、談不成、失敗",
+      "example": "We were ready to sign the contract, but unfortunately, the entire business deal fell through at the last minute due to financial disagreements.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "immerse oneself in reading",
+      "chinese": "沉浸式閱讀、把自己埋首於閱讀中",
+      "example": "On a rainy weekend afternoon, she loves to sit in a quiet armchair with a cup of hot latte and completely immerse herself in reading Peter Hessler's latest book.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "routine",
+      "chinese": "日常作息，常規生活",
+      "example": "I keep a healthy daily routine every weekday. 我平日維持規律的日常作息。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "workload",
+      "chinese": "工作量",
+      "example": "The heavy workload makes me feel tired easily. 龐大的工作量讓我容易感到疲累。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "workstation",
+      "chinese": "工位",
+      "example": "My workstation is near the office window. 我的工位靠近辦公室窗邊。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "wrap up daily tasks",
+      "chinese": "收尾日常工作",
+      "example": "I need to wrap up daily tasks before getting off work. 我下班前必須收尾日常工作。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "elaborate",
+      "chinese": "詳細闡述",
+      "example": "Please elaborate your opinions in the meeting. 請在會議中詳細闡述你的看法。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "presentation",
+      "chinese": "工作匯報，專案演示",
+      "example": "I will make a work presentation this Friday. 這週五我要進行工作匯報。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "threaten",
+      "chinese": "使感到威脅",
+      "example": "Strict rules make new staff feel threatened. 嚴格的制度讓新人感到備受威脅。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "subordinate",
+      "chinese": "下屬，下級",
+      "example": "He is good at getting along with his subordinates. 他善於和下屬相處。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "trivial tasks",
+      "chinese": "瑣碎雜事",
+      "example": "Too many trivial tasks waste my working time. 過多瑣碎雜事耗費我的工作時間。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "drain energy",
+      "chinese": "消耗精力",
+      "example": "Long meetings will drain energy quickly. 長時間開會會快速消耗精力。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "cross-rank communication",
+      "chinese": "跨層級溝通",
+      "example": "Good cross-rank communication helps work go smoothly. 良好的跨層級溝通有助工作順利進行。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "independent charge",
+      "chinese": "獨立負責",
+      "example": "I can take independent charge of this new project. 我能夠獨立負責這項新專案。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "interrupt / disturb",
+      "chinese": "打斷，打擾",
+      "example": "Please do not disturb me when I am busy working. 我忙於工作時請不要打擾我。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "negotiate",
+      "chinese": "溝通協商",
+      "example": "We need to negotiate about the working time. 我們需要針對工作時間進行溝通協商。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "superficial",
+      "chinese": "淺顯表面的",
+      "example": "This is just a superficial idea without deep thinking. 這只是淺顯表面、未經深思的想法。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "passion",
+      "chinese": "熱忱，熱愛",
+      "example": "She still keeps full passion for her job. 她依舊對工作滿懷熱忱。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "enthusiasm",
+      "chinese": "積極性，熱情",
+      "example": "Proper rest can raise working enthusiasm. 適當休息能提升工作積極性。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "exhausted",
+      "chinese": "身心俱疲的",
+      "example": "I feel exhausted after finishing all the work. 完成所有工作後我身心俱疲。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "layoff",
+      "chinese": "裁員",
+      "example": "Some small companies will have layoffs in off-seasons. 部分小公司淡季會進行裁員。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "stagnation",
+      "chinese": "停滯不前",
+      "example": "Long repeated work leads to career stagnation. 長期重複工作會造成職涯停滯不前。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "subscriber",
+      "chinese": "訂閱用戶",
+      "example": "This channel has more than ten thousand subscribers. 這個頻道擁有上萬名訂閱用戶。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "apply for vacant positions",
+      "chinese": "應聘空缺崗位",
+      "example": "Many graduates come to apply for vacant positions. 許多畢業生前來應聘空缺崗位。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "achievement",
+      "chinese": "成就感",
+      "example": "Finishing hard tasks brings great achievement. 完成困難任務能帶來滿滿成就感。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "creativity",
+      "chinese": "創造力",
+      "example": "Design work needs rich creativity very much. 設計類工作十分需要豐富創造力。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "introvert",
+      "chinese": "內向的人",
+      "example": "As an introvert, I like working alone. 身為內向的人，我喜歡獨自工作。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "extrovert",
+      "chinese": "外向的人",
+      "example": "Most sales staff are typical extroverts. 多數業務人員都是典型外向的人。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "attract attention",
+      "chinese": "吸引注意力",
+      "example": "Unique work ideas can attract attention quickly. 獨特的工作想法能快速吸引注意力。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "reject requests",
+      "chinese": "拒絕要求",
+      "example": "We should learn to reject unreasonable requests. 我們要學會拒絕不合理的要求。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "talented",
+      "chinese": "有才幹的",
+      "example": "He is a talented young worker in the team. 他是團隊裡有才幹的年輕員工。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "accidentally",
+      "chinese": "無意間",
+      "example": "I accidentally knew his working plan. 我無意間得知了他的工作計畫。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fixed quota",
+      "chinese": "固定名額/編制",
+      "example": "This position has a strict fixed quota. 這個職位有嚴格的固定名額。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "escape",
+      "chinese": "逃離",
+      "example": "Many people want to escape from busy work. 許多人想要逃離繁忙的工作。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "on purpose / intend to do sth",
+      "chinese": "故意做某事",
+      "example": "She didn't make mistakes on purpose. 她並非故意犯下錯誤。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "eliminate",
+      "chinese": "淘汰",
+      "example": "The company will eliminate low-efficiency workers. 公司將淘汰效率低下的員工。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Jawbone",
+      "chinese": "下顎骨；頜骨",
+      "example": "",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "mandible",
+      "chinese": "（醫學）下顎骨",
+      "example": "The doctor checked my mandible for any damage. 醫生檢查了我的下顎骨是否有損傷。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "temporomandibular joint",
+      "chinese": "顳顎關節",
+      "example": "Stress can cause pain in the temporomandibular joint. 壓力可能導致顳顎關節疼痛。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "International Workers’ Day",
+      "chinese": "國際勞動節",
+      "example": "We have a holiday on International Workers’ Day. 國際勞動節我們會放假。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "competitive work culture",
+      "chinese": "競爭激烈的工作文化",
+      "example": "Many people feel tired in a competitive work culture. 很多人在競爭激烈的工作文化中感到疲憊。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "health warning",
+      "chinese": "健康警示；健康警訊",
+      "example": "Frequent tiredness is a health warning. 經常疲倦是一種健康警訊。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "annual leave",
+      "chinese": "年假；年度休假",
+      "example": "I am planning my annual leave for May. 我正在規劃五月的年假。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "active mind",
+      "chinese": "活躍的思維；思緒活躍",
+      "example": "He has an active mind and never stops thinking. 他思緒活躍，總是不停思考。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "customer / client",
+      "chinese": "customer 顧客；client 客戶",
+      "example": "The shop serves many customers, while the lawyer has clients. 這家店有很多顧客，而律師擁有專屬客戶。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "personality",
+      "chinese": "性格；個性",
+      "example": "They have very different personalities. 他們的性格截然不同。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "moderate level",
+      "chinese": "中等水平；適度",
+      "example": "A moderate level of exercise is good for health. 適度的運動對健康有益。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "get things done quickly",
+      "chinese": "快速處理完事情",
+      "example": "She can get things done quickly without mistakes. 她能快速又不出錯地把事情做完。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "procrastinator / planner",
+      "chinese": "procrastinator 拖延者；planner 規劃者",
+      "example": "I am a planner, but my brother is a procrastinator. 我是個會規劃的人，但我弟弟很愛拖延。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "deeply involved",
+      "chinese": "全神貫注的；深陷其中的",
+      "example": "He is deeply involved in his new project. 他全心投入在新專案上。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "immerse yourself in something",
+      "chinese": "沉浸於某事；專心致志",
+      "example": "It’s easy to immerse yourself in work and forget time. 人很容易沉浸工作而忘記時間。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "extension",
+      "chinese": "延期；延長",
+      "example": "You can ask for an extension on your course. 你可以申請課程有效期延長。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "validity",
+      "chinese": "有效期；有效性",
+      "example": "The validity of the course is one year. 這門課的有效期為一年。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "contradiction",
+      "chinese": "矛盾；衝突",
+      "example": "There is a contradiction between his words and actions. 他的言行互相矛盾。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "conflicting",
+      "chinese": "相互衝突的；矛盾的",
+      "example": "We have conflicting plans for the weekend. 我們週末的計畫互相衝突。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "cheek",
+      "chinese": "臉頰",
+      "example": "My cheek feels painful after sleeping badly. 我沒睡好，臉頰覺得痛。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "limited",
+      "chinese": "有限的；受限制的",
+      "example": "My time after work is very limited. 我下班後的時間非常有限。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "daily routine",
+      "chinese": "日常作息；每日例行公事",
+      "example": "I need to change my daily routine to get more rest. 我需要調整日常作息來多休息。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "infinitive",
+      "chinese": "不定詞（to + 動詞）",
+      "example": "After “want”, we use the infinitive. want 後面要接不定詞。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "enjoy / imagine / avoid / finish doing",
+      "chinese": "只能接 V-ing 的動詞",
+      "example": "I avoid walking alone at night. 我避免晚上獨自行走。",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "hate / love",
+      "chinese": "可接 to do / doing 的動詞（討厭/喜愛）",
+      "example": "I love listening to music. = I love to listen to music.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "seem / would like / choose / decide / hope",
+      "chinese": "只能接 to do 的動詞",
+      "example": "I hope to see you soon.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Verb pattern",
+      "chinese": "動詞句式 / 動詞型態",
+      "example": "You need to learn which verb pattern to use after \"avoid.\"（你需要學習在 \"avoid\" 之後使用哪種動詞句式。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Planting",
+      "chinese": "種種、栽種",
+      "example": "Planting trees can help reduce carbon dioxide in the atmosphere.（種樹有助於減少大氣中的二氧化碳。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Degree Celsius",
+      "chinese": "攝氏度",
+      "example": "The server room must be kept at 20 degrees Celsius.（機房必須保持在攝氏 20 度。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Mosquito",
+      "chinese": "蚊子",
+      "example": "I was awake all night because of a mosquito in my room.（因為房間裡有一隻蚊子，我整晚都沒睡。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Air conditioner / Fan",
+      "chinese": "冷氣 / 電風扇",
+      "example": "Turn on the air conditioner; it's too hot in here.（開冷氣吧，這裡太熱了。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Humid",
+      "chinese": "潮濕的（通常指天氣）",
+      "example": "The weather in Wuhan is very humid during the summer months.（武漢夏天的天氣非常潮濕。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Frustrated",
+      "chinese": "感到挫敗的、煩躁的",
+      "example": "He felt frustrated when the software kept crashing.（當軟體不斷當機時，他感到很挫敗。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Disrupt",
+      "chinese": "擾亂、使中斷",
+      "example": "The strike disrupted the city’s public transport system.（罷工擾亂了城市的公共交通系統。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Express yourself smoothly",
+      "chinese": "表達流利",
+      "example": "Reading more books will help you express yourself smoothly in English.（多讀書會幫助你用英文流利地表達自己。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Avoid doing something",
+      "chinese": "避免做某事",
+      "example": "You should avoid using the same password for every website.（你應該避免在每個網站都使用相同的密碼。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Enjoy doing something",
+      "chinese": "享受做某事",
+      "example": "Do you enjoy gardening in your spare time?（你喜歡在閒暇時間從事園藝嗎？）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Fixed phrase",
+      "chinese": "固定短語 / 慣用語",
+      "example": "\"On time\" is a fixed phrase that means not late.（\"On time\" 是個固定短語，意思是準時。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Capacity",
+      "chinese": "容量 / 能力",
+      "example": "The stadium has a capacity of 50,000 people.（這座體育場可容納五萬人。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Verb combination",
+      "chinese": "動詞組合",
+      "example": "Phrasal verbs are a common type of verb combination.（短語動詞是一種常見的動詞組合。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Choose (verb) / Choice (noun)",
+      "chinese": "選擇",
+      "example": "It’s hard to choose (v.) when there are so many good choices (n.).（有這麼多好的選擇時，很難做出決定。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Prefix -ex",
+      "chinese": "出、外、前任的",
+      "example": "Extract means to pull something out; ex-wife means a former wife.（Extract 是拔出；ex-wife 是前妻。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Pronunciation",
+      "chinese": "發音",
+      "example": "He has excellent English pronunciation.（他的英文發音非常好。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Expect / Expert / Extract",
+      "chinese": "預期 / 專家 / 提取",
+      "example": "We expect an expert to extract the data from the broken drive.（我們預期會有一位專家從壞掉的硬碟中提取數據。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Lay off",
+      "chinese": "裁員",
+      "example": "The tech company had to lay off 200 workers this month.（這間科技公司這個月不得不裁員 200 人。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Tencent",
+      "chinese": "騰訊",
+      "example": "Tencent is one of the largest technology companies in the world.（騰訊是全球最大的科技公司之一。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Combination",
+      "chinese": "結合、組合",
+      "example": "This color combination looks very professional.（這個顏色組合看起來非常專業。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Increase workload",
+      "chinese": "增加工作量",
+      "example": "Taking on another project will significantly increase my workload.（接手另一個專案會顯著增加我的工作量。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Technology Verbs",
+      "chinese": "成就感",
+      "example": "Finishing the task gives me a strong sense of achievement.",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    }
+  ]
+}
