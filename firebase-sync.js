@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
-import { firebaseConfig } from "./firebase-config.js";
+import { firebaseConfig } from "./firebase-config.js?v=20261014-2";
 
 const status = document.getElementById("firebaseStatus");
 const login = document.getElementById("firebaseLogin");
@@ -10,7 +10,8 @@ const upload = document.getElementById("firebaseUpload");
 const download = document.getElementById("firebaseDownload");
 function report(t){status.textContent=t;}
 if (!firebaseConfig.apiKey || !firebaseConfig.projectId || firebaseConfig.apiKey === "REPLACE_ME") {
-  report("尚未設定 Firebase 專案。請先依照 README 建立 Firebase 設定。");
+  login.hidden = false; login.disabled = true;
+  report("Firebase 設定尚未載入。請強制重新整理；若持續發生，檢查 firebase-config.js。");
 } else {
   try {
     const app=initializeApp(firebaseConfig), auth=getAuth(app), db=getFirestore(app);
@@ -42,5 +43,5 @@ if (!firebaseConfig.apiKey || !firebaseConfig.projectId || firebaseConfig.apiKey
         report("已還原 "+items.length+" 筆資料。重新整理頁面以載入更新。");
       }catch(e){report("還原失敗："+e.message)}
     };
-  }catch(e){report("Firebase 初始化失敗："+e.message)}
+  }catch(e){login.hidden=false;login.disabled=true;report("Firebase 初始化失敗："+e.message)}
 }
