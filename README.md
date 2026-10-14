@@ -5,6 +5,9 @@ Build your English intuition, one sentence at a time.
 A mobile-friendly, local-first English practice app hosted on GitHub Pages.
 
 ## Features
+- Warm paper-and-green learning journal layout, with responsive mobile navigation and keyboard focus indicators
+- Guided flashcards, session progress, restartable completion screens, and quiz self-assessment summaries
+- Library filters for new, due, and familiar sentences (due counts exclude unstudied items)
 - Daily practice: Monday–Friday two new items, with review; Saturday weekly recall; Sunday long-term review
 - Chinese-to-English active recall and self-assessment
 - English text-to-speech (browser speech synthesis)
@@ -18,6 +21,9 @@ Open `index.html` in a modern browser, or enable GitHub Pages in **Settings → 
 
 When Pages is enabled, the expected URL is:
 https://greamown.github.io/english-forge/
+
+## Checks
+Run `node --test tests/learning.test.cjs` (Node.js 18+; no dependencies). These checks cover session restart, direct navigation, answer/skip handling, review counts, self-assessment, and library filtering.
 
 ## Import format
 ```json
@@ -35,7 +41,7 @@ The importer also accepts objects with `items`, `references`, `vocabulary`, or `
 
 ## Privacy and limitations
 - All added content and practice progress are stored in the current browser's `localStorage`.
-- Progress is not synchronized between browsers or devices; export backups regularly.
+- Progress is not automatically synchronized between browsers or devices; export JSON backups regularly or use the optional manual Firebase backup controls.
 - The website does not access Gmail, and no Gmail tokens or private email bodies are committed to this repository.
 - Gmail content can be transformed into a reviewable JSON reference dataset in ChatGPT and then imported into this app.
 - Answer checks compare normalized strings; alternative correct expressions require your own judgment.
@@ -57,7 +63,7 @@ The UI has Google sign-in and manual Firestore backup/restore controls. **They r
 3. In **Build → Authentication → Sign-in method**, enable **Google** and configure the support email.
 4. In **Authentication → Settings → Authorized domains**, add `greamown.github.io` (and localhost for testing if needed).
 5. In **Build → Firestore Database**, create the database, then copy the contents of `firestore.rules` into the **Rules** editor and click **Publish**. Do not leave Firestore in test mode.
-6. Deploy the changes to GitHub Pages, open **匯入與備份**, sign in with Google, and use **備份到雲端**. Use **從雲端還原** carefully; it overwrites local data.
+6. Deploy the changes to GitHub Pages, open **教材與備份**, sign in with Google, and use **備份到雲端**. Use **從雲端還原** carefully; it overwrites local data.
 
 ### Security notes
 - Database reads/writes are scoped to `users/{request.auth.uid}/backups/latest` by Firestore rules.
