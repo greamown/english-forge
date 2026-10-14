@@ -1,0 +1,655 @@
+{
+  "items": [
+    {
+      "english": "red wine / white wine",
+      "chinese": "紅葡萄酒 / 白葡萄酒",
+      "example": "Many people prefer red wine with beef and white wine with fish.（很多人喜歡吃牛肉時配紅葡萄酒，吃魚時配白葡萄酒。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "perfume",
+      "chinese": "香水",
+      "example": "She sprayed a little perfume on her wrist before going out.（她出門前在手腕上噴了一點香水。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "highly efficient",
+      "chinese": "高效的",
+      "example": "The new coffee machine is highly efficient and can make ten cups in two minutes.（這台新咖啡機效率很高，可以在兩分鐘內做十杯。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "moderate",
+      "chinese": "適度的，中等的",
+      "example": "Moderate exercise every day is good for your health.（每天適度運動對身體有益。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "overindulge",
+      "chinese": "過度飲用、暴飲暴食，沉溺",
+      "example": "It is easy to overindulge in sweet desserts during holidays.（節假日期間人們很容易暴飲暴食甜點。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "one third",
+      "chinese": "三分之一",
+      "example": "One third of the cake was left after the party.（派對結束後還剩下三分之一的蛋糕。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "sip",
+      "chinese": "小口啜飲；（名詞）小一口",
+      "example": "He sat by the window and slowly sip his hot coffee.（他坐在窗邊慢慢地喝著熱咖啡。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "swirl",
+      "chinese": "搖晃（酒杯），旋轉",
+      "example": "Wine drinkers like to swirl the glass before smelling the wine.（品酒者喜歡在聞酒香前先輕搖酒杯。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "sniff",
+      "chinese": "輕嗅，吸氣聞",
+      "example": "She took a quick sniff of the soup to see if it was fresh.（她湊近聞了一下湯，看看是否新鮮。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Valpolicella",
+      "chinese": "瓦波利切拉（意大利葡萄酒/產區名）",
+      "example": "Valpolicella is a popular Italian red wine that goes great with pasta.（瓦波利切拉是一款很受歡迎的意大利紅酒，和意面很配。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "flavour profile",
+      "chinese": "風味輪廓，風味特徵",
+      "example": "This dark chocolate has a complex flavour profile with fruity and nutty notes.（這款黑巧克力有著複雜的風貌輪廓，帶有果香和堅果香。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "pepper",
+      "chinese": "胡椒",
+      "example": "Add some black pepper to the soup for a better taste.（在湯裡加點黑胡椒味道會更好。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "almond",
+      "chinese": "杏仁，扁桃仁",
+      "example": "Eating a handful of almonds is a healthy snack choice.（吃一把杏仁是健康的零食選擇。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "cinnamon",
+      "chinese": "肉桂",
+      "example": "Many people love to sprinkle cinnamon on top of their coffee.（很多人喜歡在咖啡上撒肉桂粉。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "nut",
+      "chinese": "堅果",
+      "example": "This bakery makes chocolate cookies filled with nuts.（這家麵包房製作夾有堅果的巧克力餅乾。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "acidity / sour",
+      "chinese": "酸度 / 酸味的",
+      "example": "This white wine has a nice fresh acidity, so it does not taste too sour.（這款白葡萄酒酸度清新，因此嚐起來不會太酸。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "body // light-bodied / full-bodied",
+      "chinese": "酒体（醇厚度） // 清淡酒體 / 飽滿酒體",
+      "example": "If you like thick and strong drinks, choose a full-bodied red wine.（如果你喜歡濃郁厚重的飲料，就選酒體飽滿的紅葡萄酒。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "tannin / smooth tannin / firm tannin",
+      "chinese": "單寧 / 柔和單寧 / 緊實單寧",
+      "example": "The red wine has smooth tannins, making it very easy to drink.（這款紅酒單寧柔和，非常容易入口。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "dryness / off-dry",
+      "chinese": "干度（無甜度） / 半干型（微甜）",
+      "example": "If you do not like completely dry wines, try an off-dry white wine instead.（如果你不喜歡完全不甜的酒，可以試試半干型白葡萄酒。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "young / aged",
+      "chinese": "年輕款（新酒） / 陳年款（老酒）",
+      "example": "Young wines taste fresh, but aged wines usually smell more complex.（新酒喝起來新鮮，但陳年酒聞起來通常更複雜。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "astringent",
+      "chinese": "澀口的，收斂感的",
+      "example": "Unripe bananas and strong tea often leave an astringent feeling on your tongue.（沒熟透的香蕉和濃茶常在舌頭上留下澀感。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "volume / volunteer",
+      "chinese": "容量，體積 / 志願者（注意兩者發音區分）",
+      "example": "Check the volume on the bottle to see how much water is inside.（查看瓶子上的容量，看看裡面有多少水。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "top note / middle note / base note / finish",
+      "chinese": "前調 / 中調 / 底調 / 尾調（後味）",
+      "example": "This wine has a fresh citrus top note and a very long, pleasant finish.（這款葡萄酒帶有清新的柑橘前調，並帶有非常悠長舒適的尾調。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "Chinese liquor",
+      "chinese": "中國白酒",
+      "example": "Chinese liquor is usually served in small glasses during big celebrations.（中國白酒通常在重大慶祝活動中用小杯飲用。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "white wine",
+      "chinese": "白葡萄酒",
+      "example": "Would you like a glass of white wine with your seafood dinner?（你吃海鮮晚餐時想來一杯白葡萄酒嗎？）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "liberty",
+      "chinese": "自由，自在感",
+      "example": "Walking alone in the quiet mountains gave her a wonderful feeling of liberty.（獨自在安靜的山間行走給了她一種美好的自在感。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "resistance exercise",
+      "chinese": "抗阻訓練，力量訓練",
+      "example": "Resistance exercise helps build strong muscles and bones as you get older.（隨著年齡增長，抗阻訓練有助於強健肌肉和骨骼。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "soya milk",
+      "chinese": "豆漿，大豆奶",
+      "example": "Many Asian people enjoy drinking warm soya milk for breakfast.（許多亞洲人喜歡在早餐時喝熱豆漿。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "the past few years",
+      "chinese": "過去幾年，近年來",
+      "example": "Over the past few years, more people have started working from home.（在過去的幾年裡，更多的人開始居家辦公。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "mental health / mentally / physically",
+      "chinese": "心理健康 / 精神層面地 / 身體層面地",
+      "example": "Yoga helps people stay healthy both mentally and physically.（瑜伽有助於人們在精神和身體層面都保持健康。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "glycemic index (GI)",
+      "chinese": "升糖指數（GI）",
+      "example": "Eating foods with a low glycemic index helps control your energy throughout the day.（食用低升糖指數的食物有助於全天控制能量。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "dietary fibre",
+      "chinese": "膳食纖維",
+      "example": "Vegetables and whole grains are rich in dietary fibre.（蔬菜和全谷物富含膳食纖維。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "childhood",
+      "chinese": "童年，幼年",
+      "example": "She spent most of her happy childhood living in a quiet village.（她的快樂童年大部分時間是在一個安靜的小村莊度過的。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "traditional flavour",
+      "chinese": "傳統風味，地道風味",
+      "example": "This old restaurant is famous for keeping the traditional flavour of soup noodles.（這家老店以保留湯麵的傳統風味而聞名。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "dark roast coffee bean / medium roast / light roast",
+      "chinese": "深烘咖啡豆 / 中烘 / 淺烘",
+      "example": "Dark roast coffee beans give your morning drink a strong, bold taste.（深烘咖啡豆能為你的晨間咖啡帶來濃郁強烈的口感。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "chemistry",
+      "chinese": "化學；（人與人之間的）化學反應/默契",
+      "example": "Cooking food involves a lot of interesting simple chemistry.（烹飪食物包含許多有趣且簡單的化學反應。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fragrance",
+      "chinese": "香氣，芳香",
+      "example": "The fresh fragrance of wild flowers filled the whole garden.（野花的清新香氣充滿了整個花園。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "bitter",
+      "chinese": "苦澀的，苦味的",
+      "example": "Dark chocolate can taste a bit bitter if you are used to milk chocolate.（如果你習慣了牛奶巧克力，黑巧克力嚐起來可能會有點苦。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "leave / typhoon leave / ask for leave",
+      "chinese": "假期，休假 / 颱風假 / 請假",
+      "example": "I felt very sick this morning, so I had to ask for leave and stayed in bed.（今天早上我病得很厲害，所以我必須請假並躺在床上休息。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "public holiday calendar",
+      "chinese": "節假日日曆",
+      "example": "She looked at the public holiday calendar to plan her autumn trip with her partner.（她看了看節假日日曆，以便和伴侶規劃他們的秋季旅行。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "natural disaster",
+      "chinese": "自然災害",
+      "example": "Extreme weather has caused more natural disasters around the world in recent years.（近年來，極端天氣在世界各地引發了更多的自然災害。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "tornado / flood / earthquake / typhoon",
+      "chinese": "龍捲風 / 洪水 / 地震 / 颱風",
+      "example": "After the earthquake, the government quickly sent food and water to the damaged towns.（地震發生後，政府迅速向受災城鎮運送了食物和水。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "vitamins",
+      "chinese": "維生素",
+      "example": "Eating fresh vegetables and fruits is an easy way to get enough vitamins.（多吃新鮮蔬菜和水果是攝取足夠維生素的簡單方法。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "caffeine",
+      "chinese": "咖啡因",
+      "example": "Having too much caffeine in the afternoon might make it hard for you to sleep at night.（下午攝入過多咖啡因可能會讓你晚上很難入睡。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "alcohol / red wine",
+      "chinese": "酒精，酒類 / 紅酒",
+      "example": "To stay healthy, you should not drink too much alcohol before going to bed.（為了保持健康，你不應該在睡前喝太多酒。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "moderate amounts",
+      "chinese": "適量，適中的分量",
+      "example": "Drinking moderate amounts of tea can be very good for your stomach.（喝適量的茶對你的胃很有好處。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "skip breakfast / miss breakfast",
+      "chinese": "不吃早餐",
+      "example": "Skipping breakfast can make you feel tired and hungry by midday.（不吃早餐會讓你到中午時感到疲倦和飢餓。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fatty foods",
+      "chinese": "高脂肪食物",
+      "example": "Eating too many fatty foods is not good for your heart.（吃太多高脂肪食物對心臟不好。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fizzy drinks / soda",
+      "chinese": "氣泡飲料，汽水 / 蘇打",
+      "example": "I prefer plain water because fizzy drinks contain too much sugar.（我更喜歡喝純水，因為汽水含有太多糖分。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "cocktail",
+      "chinese": "雞尾酒",
+      "example": "We ordered two sweet cocktails with lime and mint at the beach bar.（我們在海灘酒吧點了兩杯帶有青檸和薄荷的甜雞尾酒。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "flatmate",
+      "chinese": "室友，合租人",
+      "example": "My flatmate and I take it in turns to clean the shared kitchen every weekend.（我和室友每個週末輪流打掃共用的廚房。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "mahjong",
+      "chinese": "麻將",
+      "example": "During the Chinese New Year, playing mahjong is a fun way to spend time with relatives.（在農曆新年期間，打麻將是與親戚共度時光的有趣方式。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "air pollution / water pollution",
+      "chinese": "空氣污染 / 水污染",
+      "example": "Driving electric cars instead of petrol cars is a great way to reduce air pollution.（開電動車代替汽油車是減少空氣污染的好方法。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "company bus",
+      "chinese": "公司班車",
+      "example": "I don't need to drive to work because I can take the company bus every morning.（我不需要開車上班，因為我每天早上都可以搭公司班車。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "soil / dust / dirt",
+      "chinese": "泥土（自然土壤） / 灰塵，浮塵 / 污垢，髒土",
+      "example": "She bought some fresh soil to plant flowers in her balcony garden.（她買了一些新鮮泥土，準備在陽台花園裡種花。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "tense / intense / anxious",
+      "chinese": "緊繃的，緊張的 / 高強度的，強烈的 / 焦慮的，憂慮的",
+      "example": "Her shoulders felt very tense after sitting at her desk for eight hours.（在辦公桌前坐了八個小時後，她的肩膀感覺非常緊繃。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "soda / sugar-free cola",
+      "chinese": "蘇打汽水 / 無糖可樂",
+      "example": "Since she is trying to cut down on sugar, she always orders sugar-free cola.（因為她正試圖減少糖分攝入，所以她總是點無糖可樂。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "chips / French fries",
+      "chinese": "薯片；薯條（英式） / 炸薯條（美式）",
+      "example": "In London, they serve hot fish and chips with salt and vinegar.（在倫敦，他們提供搭配鹽和醋的熱魚和薯條。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "afternoon thunderstorm",
+      "chinese": "午後雷陣雨",
+      "example": "I forgot my umbrella and got completely wet in the sudden afternoon thunderstorm.（我忘了帶傘，在突如其來的午後雷陣雨中全身都淋濕了。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "treadmill",
+      "chinese": "跑步機",
+      "example": "If it rains tomorrow, I will just run on the treadmill in the gym.（如果明天下雨，我原打算去戶外跑步就改成去健身房跑跑步機。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "fishy odour",
+      "chinese": "海鮮腥味，魚腥味",
+      "example": "Lemon juice is very useful for washing away the fishy odour from your hands after cooking seafood.（煮完海鮮後，檸檬汁對於洗掉手上的海鮮腥味非常有用。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "member of staff",
+      "chinese": "員工、在職人員",
+      "example": "Every member of staff at our school attended the meeting yesterday.（我們學校的每位員工昨天都參加了會議。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "come up with brand-new thoughts",
+      "chinese": "冒出全新想法",
+      "example": "During the brainstorming session, Sarah came up with some brand-new thoughts for our new English course.（在腦力激盪會議中，莎拉為我們的新英語課程想出了一些全新的想法。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "endless changes of opinion",
+      "chinese": "無休止變更意見",
+      "example": "It is hard to work with a boss who has endless changes of opinion about the project layout.（與一個對專案規劃有無休止意見變更的老闆一起工作是很困難的。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "argue with somebody",
+      "chinese": "和某人爭論",
+      "example": "I saw Tom argue with his partner about where to go for the summer holiday.（我看到湯姆和他的伴侶為了暑假去哪裡玩而爭吵。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "find solutions",
+      "chinese": "找出解決辦法",
+      "example": "Instead of complaining about the system error, we should focus on finding solutions.（與其抱怨系統錯誤，我們應該專注於尋找解決辦法。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "reach conclusions / results",
+      "chinese": "得出結論、形成成果",
+      "example": "After a two-hour meeting, the team finally reached a conclusion about the new textbook structure.（經過兩個小時的會議，團隊終於對新教科書的結構得出了結論。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "core points",
+      "chinese": "核心觀點",
+      "example": "Your presentation is too long; you just need to highlight the core points.（你的簡報太長了；你只需要強調核心觀點即可。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "lock down the overall structure",
+      "chinese": "敲定整體框架",
+      "example": "Once we lock down the overall structure of the syllabus, we can start writing the details of each unit.（一旦我們敲定了教學大綱的整體框架，就可以開始撰寫每個單元的細節。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "edit PowerPoint slides and images",
+      "chinese": "編輯PPT文字與圖片",
+      "example": "I need to edit the PowerPoint slides and images before presenting to the manager tomorrow morning.（在明天早上向經理做簡報之前，我需要編輯好PPT的投影片和圖片。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "cut down on information",
+      "chinese": "精簡信息",
+      "example": "The report is too wordy; we should cut down on information to make it easier to read.（這份報告太囉唆了；我們應該精簡信息以使其更容易閱讀。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "write a summary",
+      "chinese": "做總結",
+      "example": "At the end of the lesson, the teacher asked us to write a summary of the story we just read.（課程結束時，老師要求我們對剛剛讀過的故事做一個總結。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "company-wide presentation",
+      "chinese": "面向全公司的彙報",
+      "example": "The CEO gave a company-wide presentation about the new office policies this morning.（執行長今天早上做了一個關於新辦公室政策的面向全公司的彙報。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "external partners",
+      "chinese": "外部合作方",
+      "example": "We need to cooperate closely with our external partners to run this online course successfully.（我們需要與外部合作方緊密合作，才能成功營運這個線上課程。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "hand a project over to sb",
+      "chinese": "把項目交給某人負責",
+      "example": "Before Alice left for her vacation, she handed the project over to me.（在愛麗絲請假去度假之前，她把項目交給了我負責。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "similar projects",
+      "chinese": "類似項目",
+      "example": "Since we have done similar projects before, this new task should be quite easy for us.（既然我們以前做過類似項目，這項新任務對我們來說應該挺容易的。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "keep fit",
+      "chinese": "保持健康、身材勻稱",
+      "example": "My partner goes swimming and plays pickleball twice a week to keep fit.（我的伴侶每週去游泳和打皮克球兩次以保持身材勻稱。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "suit something",
+      "chinese": "適合某物/某事",
+      "example": "This intensive weekend course doesn't really suit students who prefer to learn slowly.（這個密集的週末課程並不太適合更喜歡慢節奏學習的學生。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "good physique / toned figure",
+      "chinese": "好身材 / 線條緊緻的身材",
+      "example": "-",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "carbohydrates / carbs",
+      "chinese": "碳水化合物",
+      "example": "If you want to lose weight, you might want to eat fewer carbs like white bread and white rice.（如果你想減肥，你可能需要少吃一些像白麵包和白米飯這樣的高碳水食物。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "go on a diet",
+      "chinese": "節食、控制飲食",
+      "example": "She decided to go on a diet before summer because she wanted to fit into her favorite dress.（她決定在夏天之前開始控制飲食，因為她想穿下她最喜歡的洋裝。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "consume calories / burn calories",
+      "chinese": "攝入卡路里 / 消耗卡路里",
+      "example": "If you consume more calories than you burn, you will gain weight.（如果你攝入的卡路里比消耗的卡路里多，你就會變胖。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "tea bases",
+      "chinese": "茶底",
+      "example": "This bubble tea shop allows you to choose from four different tea bases, including Oolong and Jasmine green tea.（這家奶茶店允許你從四種不同的茶底中進行選擇，包括烏龍茶和茉莉綠茶。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "hand-shaken bubble tea",
+      "chinese": "手搖奶茶",
+      "example": "Buying a cold hand-shaken bubble tea is a perfect way to cool down on a scorching summer afternoon.（在酷熱的夏日午後，買一杯冰涼的手搖奶茶是消暑的完美方式。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "chewy texture",
+      "chinese": "有嚼勁的口感",
+      "example": "I love the tapioca pearls in this drink because they have a very nice, chewy texture.（我非常喜歡這款飲料裡的木薯珍珠，因為它們有一種非常好、有嚼勁的口感。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "tapioca starch",
+      "chinese": "木薯粉",
+      "example": "To make authentic boba pearls at home, you must buy high-quality tapioca starch.（想在家裡製作道地的波霸珍珠，你必須購買高品質的木薯粉。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "high in sugar",
+      "chinese": "高糖分",
+      "example": "Regular soda and hand-shaken milk teas are usually very high in sugar, so I always ask for \"no sugar\".（普通的汽水和手搖奶茶通常糖分很高，所以我總是要求「不加糖」。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "convenience stores",
+      "chinese": "便利店",
+      "example": "There are three different convenience stores right outside our school gates, which is very handy.（我們學校大門外就有三家不同的便利店，這非常方便。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "artificial additives",
+      "chinese": "人工添加劑",
+      "example": "Parents usually prefer to buy snacks that do not contain any artificial additives for their children.（家長通常更傾向於為孩子購買不含任何人工添加劑的零食。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "award-winning tea blends",
+      "chinese": "獲獎茶品",
+      "example": "This tea shop became famous because it uses award-winning tea blends as its secret ingredient.（這家茶飲店之所以出名，是因為它使用獲獎茶品作為其秘密配方。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "ready-to-drink beverages",
+      "chinese": "即飲飲品",
+      "example": "Ready-to-drink beverages are very popular among busy office workers who don't have time to wait in line.（即飲飲品在沒有時間排隊的忙碌上班族中非常受歡迎。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "travel policy",
+      "chinese": "出行政策、差旅政策",
+      "example": "According to our new company travel policy, employees must book economy class flights for short trips.（根據我們公司新的差旅政策，員工在短途旅行時必須預訂經濟艙機票。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    },
+    {
+      "english": "traditional food",
+      "chinese": "傳統美食",
+      "example": "Mooncakes are a famous traditional food that Chinese people eat during the Mid-Autumn Festival.（月餅是中國人在中秋節期間食用的一種著名的傳統美食。）",
+      "category": "English-Class",
+      "source": "English-Class lessons"
+    }
+  ]
+}
