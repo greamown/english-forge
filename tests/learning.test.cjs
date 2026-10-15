@@ -303,3 +303,17 @@ test('old Japanese seed readings are supplemented without changing saved progres
   assert.equal(ja.run('data[0].seen'),6);
   assert.equal(ja.run('data[1].romaji'),undefined);
 });
+
+
+test('Japanese cards hide the translation provenance notice and preserve other notes', () => {
+  const a = app('ja');
+  const notice = '中文為匯入時補充翻譯，非 Notion 原文。';
+  for (const extra of ['', '讀音可能漏字。']) {
+    a.run('data=[{english:"水",chinese:"水",source:"Notion Japan",note:'+JSON.stringify(extra+notice)+'}];startStudy();renderLibrary()');
+    assert.equal(a.el('studyextra').textContent, extra || 'Notion Japan');
+    assert.ok(!a.el('items').innerHTML.includes(notice));
+    assert.equal(a.el('items').innerHTML.includes('<details>'), !!extra);
+    if (extra) assert.ok(a.el('items').innerHTML.includes(extra));
+    assert.equal(a.run('data[0].note'), extra + notice);
+  }
+});
