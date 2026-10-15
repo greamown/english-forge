@@ -1,10 +1,14 @@
-# EnglishForge
+# 語言練習手帳 · English & Japanese
 
 Build your English intuition, one sentence at a time.
 
-A mobile-friendly, local-first English practice app hosted on GitHub Pages.
+A mobile-friendly, local-first English and Japanese practice app hosted on GitHub Pages.
+
+The homepage offers two entries: English keeps the existing EnglishForge experience; Japanese uses the same learning flow with its own vocabulary, sentences, kana readings, and Japanese pronunciation. The GitHub repository and public site URL remain unchanged.
 
 ## Features
+- Language selector homepage with separate English (`practice.html?lang=en`) and Japanese (`practice.html?lang=ja`) learning spaces
+- Independent local study records, JSON backups, and manual cloud backup fields for each language
 - Warm paper-and-green learning journal layout, with responsive mobile navigation and keyboard focus indicators
 - Guided flashcards, session progress, restartable completion screens, and quiz self-assessment summaries
 - Library filters for new, due, and familiar sentences (due counts exclude unstudied items)
@@ -25,7 +29,13 @@ When Pages is enabled, the expected URL is:
 https://greamown.github.io/english-forge/
 
 ## Checks
-Run `node --test tests/learning.test.cjs` (Node.js 18+; no dependencies). These checks cover session restart, direct navigation, answer/skip handling, review counts, self-assessment, library filtering, material types, shadowing, and speech error handling.
+Run `node --test tests/*.test.cjs` (Node.js 18+; no dependencies). These checks cover session restart, direct navigation, answer/skip handling, review counts, self-assessment, library filtering, material types, shadowing, speech error handling, Japanese text matching, and cloud backup isolation.
+
+## Language data
+
+English retains the existing `english-forge-v1` browser storage key, so existing records carry over. Japanese uses `japanese-forge-v1` and starts with 10 independent introductory examples. Returning to the language selector never merges or deletes progress.
+
+Cloud backups keep the original English `items`/`updatedAt` fields under `users/{uid}/backups/latest`, and store Japanese in `japaneseItems`/`japaneseUpdatedAt`. Both upload paths use [Firestore field merging](https://firebase.google.com/docs/firestore/manage-data/add-data#set_a_document), so backing up one language preserves the other. Existing rules and old English cloud backups remain compatible. An older deployed client can still replace the whole backup document; refresh open tabs to this version before using cloud backup.
 
 ## Import format
 ```json
@@ -38,6 +48,12 @@ Run `node --test tests/learning.test.cjs` (Node.js 18+; no dependencies). These 
   }
 ]
 ```
+
+For Japanese, choose the Japanese entry first and import:
+```json
+[{"japanese":"水","chinese":"水","reading":"みず","kind":"word","example":"水をください。"}]
+```
+`reading` holds kana and `example` holds a Japanese-only example for playback. Japanese does not infer spoken examples from bilingual notes, because Chinese and Japanese can share characters. Internally, both languages use the legacy `english` text field for compatibility; Japanese imports also accept `japanese` or `ja`. Exported backups include a `language` identifier; importing a labelled backup into the other language is rejected.
 
 The importer also accepts objects with `items`, `references`, `vocabulary`, or `sentences` arrays, plus common aliases for English and Chinese fields.
 

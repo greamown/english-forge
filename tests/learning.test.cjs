@@ -3,11 +3,11 @@ const assert = require('node:assert/strict');
 const { readFileSync } = require('node:fs');
 const vm = require('node:vm');
 
-const html = readFileSync(require('node:path').join(__dirname, '../index.html'), 'utf8');
+const html = readFileSync(require('node:path').join(__dirname, '../practice.html'), 'utf8');
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 
 // A small DOM stand-in keeps session and scheduling checks dependency-free.
-function app() {
+function app(language = "en", stored = new Map()) {
   const elements = new Map();
   for (const tag of html.matchAll(/<[^>]+\bid="([^"]+)"[^>]*>/g)) {
     const classes = new Set((tag[0].match(/class="([^"]*)"/)?.[1] || '').split(' '));
@@ -22,9 +22,10 @@ function app() {
     });
   }
   const context = vm.createContext({
-    document: { getElementById: id => elements.get(id), querySelectorAll: () => [] },
-    window: { scrollTo() {} },
-    localStorage: { getItem: () => null, setItem() {} },
+    document: { getElementById: id => elements.get(id), querySelectorAll: () => [], body: {}, documentElement: { dataset: {} }, createTreeWalker: () => ({ nextNode: () => null }) },
+    window: { scrollTo() {}, addEventListener() {} },
+    location: { search: "?lang=" + language }, URLSearchParams, NodeFilter: { SHOW_TEXT: 4 },
+    localStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) },
     Intl, Date, console,
   });
   vm.runInContext(script, context);
@@ -186,4 +187,49 @@ test('vocabulary examples speak the English sentence without its Chinese transla
   assert.equal(a.run('exampleEnglish({english:"efficient",note:"The new machine is efficient."})'), 'The new machine is efficient.');
   assert.equal(a.run('exampleEnglish({english:"efficient",note:"這是一個形容詞。"})'), '');
   assert.equal(a.run('exampleEnglish({english:"It works.",note:"It works."})'), '');
+});
+
+
+test('English and Japanese use independent data and preserve existing English progress', () => {
+  const stored = new Map([['english-forge-v1', JSON.stringify([{english:'Keep my progress.',chinese:'保留我的進度',seen:7,level:4,due:'2026-12-01'}])]]);
+  const en = app('en', stored);
+  assert.equal(en.run('KEY'), 'english-forge-v1');
+  assert.equal(en.run('data[0].seen'), 7);
+  const ja = app('ja', stored);
+  assert.equal(ja.run('KEY'), 'japanese-forge-v1');
+  assert.ok(ja.run('data.some(x=>x.english.includes("水"))'));
+  ja.run('schedule(data[0],2)');
+  assert.equal(JSON.parse(stored.get('english-forge-v1'))[0].seen, 7);
+  assert.equal(JSON.parse(stored.get('japanese-forge-v1'))[0].seen, 1);
+});
+
+test('Japanese imports, duplicate detection and answer checking retain kana and kanji', () => {
+  const a = app('ja');
+  assert.notEqual(a.run('norm("猫")'), a.run('norm("犬")'));
+  assert.equal(a.run('norm("水をください。")'), a.run('norm(" 水をください！ ")'));
+  assert.equal(a.run('itemKind({english:"駅はどこですか。"})'), 'sentence');
+  assert.equal(a.run('parseItems([{japanese:"猫",chinese:"貓",reading:"ねこ"}])[0].reading'), 'ねこ');
+  assert.equal(a.run('mergeItems(parseItems([{japanese:"猫",chinese:"貓"},{japanese:"犬",chinese:"狗"}]))'), 2);
+  assert.equal(a.run('mergeItems(parseItems([{japanese:"猫",chinese:"貓"}]))'), 0);
+  assert.throws(()=>a.run('parseItems({language:"en",items:[{english:"hello"}]})'), /語言/);
+  a.run('quizQueue=[{english:"水をください。",chinese:"請給我水"}];quizIndex=0;renderQuiz()');
+  a.el('quizinput').value = '駅はどこですか。';
+  a.run('checkQuiz()');
+  assert.match(a.el('quizfeedback').textContent, /不同/);
+});
+
+test('Japanese speech uses a Japanese voice and explicit examples instead of reading Chinese notes', () => {
+  const a = app('ja');
+  a.run('window.speechSynthesis={cancel(){},speak(u){window.lastUtterance=u}};speechSynthesis=window.speechSynthesis;SpeechSynthesisUtterance=function(text){this.text=text};speak("水をください。",0.7)');
+  assert.equal(a.run('window.lastUtterance.lang'), 'ja-JP');
+  assert.equal(a.run('exampleEnglish({english:"水",example:"水をください。",note:"請給我水"})'), '水をください。');
+  assert.equal(a.run('exampleEnglish({english:"水",note:"這是中文說明。"})'), '');
+});
+
+test('Japanese dynamic instructions remain Japanese after starting and hiding a card', () => {
+  const a=app('ja');
+  a.run('startStudy();revealStudy();toggleStudyText();toggleStudyText()');
+  assert.ok(!a.el('pronunciationtip').textContent.includes('英文'));
+  assert.ok(!a.el('hideEnglish').textContent.includes('英文'));
+  assert.ok(!a.el('plandesc').textContent.includes('英文'));
 });

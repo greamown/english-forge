@@ -3,6 +3,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChang
 import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js?v=20261014-2";
 
+const japanese=new URLSearchParams(location.search).get("lang")==="ja";
+const languageName=japanese?"日文":"英文";
+const storageKey=japanese?"japanese-forge-v1":"english-forge-v1";
+// shortcut: old clients can replace this shared document; refresh legacy tabs before backing up either language.
+const itemsField=japanese?"japaneseItems":"items";
+const timestampField=japanese?"japaneseUpdatedAt":"updatedAt";
+
 const status = document.getElementById("firebaseStatus");
 const login = document.getElementById("firebaseLogin");
 const logout = document.getElementById("firebaseLogout");
@@ -24,23 +31,23 @@ if (!firebaseConfig.apiKey || !firebaseConfig.projectId || firebaseConfig.apiKey
     logout.onclick=async()=>{try{await signOut(auth)}catch(e){report(e.message)}};
     upload.onclick=async()=>{
       if(!auth.currentUser)return;
-      if(!confirm("將這台裝置的題庫與學習進度覆寫至雲端？"))return;
+      if(!confirm("將這台裝置的"+languageName+"題庫與學習進度覆寫至雲端？"))return;
       try {
-        const raw=localStorage.getItem("english-forge-v1");
+        const raw=localStorage.getItem(storageKey);
         const items=JSON.parse(raw||"[]");if(!Array.isArray(items))throw Error("本機資料格式不正確");
-        await setDoc(doc(db,"users",auth.currentUser.uid,"backups","latest"),{items,updatedAt:serverTimestamp()});
-        report("已將 "+items.length+" 筆資料備份至 Firestore。");
+        await setDoc(doc(db,"users",auth.currentUser.uid,"backups","latest"),{[itemsField]:items,[timestampField]:serverTimestamp()},{merge:true});
+        report("已將 "+items.length+" 筆"+languageName+"資料備份至 Firestore。");
       }catch(e){report("備份失敗："+e.message)}
     };
     download.onclick=async()=>{
       if(!auth.currentUser)return;
-      if(!confirm("從雲端還原資料將覆蓋這台裝置的現有題庫與進度。建議先匯出 JSON。確定繼續？"))return;
+      if(!confirm("從雲端還原"+languageName+"資料將覆蓋這台裝置的對應題庫與進度。建議先匯出 JSON。確定繼續？"))return;
       try{
         const snap=await getDoc(doc(db,"users",auth.currentUser.uid,"backups","latest"));
         if(!snap.exists())throw Error("雲端還沒有備份");
-        const items=snap.data().items;if(!Array.isArray(items))throw Error("雲端資料格式不正確");
-        localStorage.setItem("english-forge-v1",JSON.stringify(items));
-        report("已還原 "+items.length+" 筆資料。重新整理頁面以載入更新。");
+        const items=snap.data()[itemsField];if(!Array.isArray(items))throw Error("雲端沒有可用的"+languageName+"備份");
+        localStorage.setItem(storageKey,JSON.stringify(items));
+        report("已還原 "+items.length+" 筆"+languageName+"資料。重新整理頁面以載入更新。");
       }catch(e){report("還原失敗："+e.message)}
     };
   }catch(e){login.hidden=false;login.disabled=true;report("Firebase 初始化失敗："+e.message)}
