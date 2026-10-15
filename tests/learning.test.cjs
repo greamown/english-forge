@@ -233,3 +233,73 @@ test('Japanese dynamic instructions remain Japanese after starting and hiding a 
   assert.ok(!a.el('hideEnglish').textContent.includes('英文'));
   assert.ok(!a.el('plandesc').textContent.includes('英文'));
 });
+
+test('Japanese preserves kana and romaji while English needs no Japanese-only fields', () => {
+  const ja=app('ja'),en=app('en');
+  assert.equal(ja.run('parseItems([{japanese:"猫",reading:"ねこ",romaji:"neko",chinese:"貓"}])[0].romaji'),'neko');
+  assert.equal(ja.run('parseItems([{japanese:"猫",romaji:{bad:true},chinese:"貓"}])[0].romaji'),undefined);
+  assert.equal(en.run('parseItems([{english:"cat",chinese:"貓"}])[0].romaji'),undefined);
+  ja.run('studyQueue=[{english:"猫",reading:"ねこ",romaji:"neko",chinese:"貓",seen:0}];studyIndex=0;renderStudy();revealStudy()');
+  assert.match(ja.el('studyromaji').textContent,/neko/);
+  ja.run('toggleStudyText()');
+  assert.equal(ja.el('studyromaji').classList.contains('hidden'),true);
+  ja.run('toggleStudyText()');
+  assert.equal(ja.el('studyromaji').classList.contains('hidden'),false);
+});
+
+test('Japanese JSON exports Japanese fields and preserves progress; English exports stay compatible', () => {
+  const ja=app('ja'),en=app('en');
+  ja.run('schedule(data[0],2)');
+  const output=JSON.parse(ja.run('JSON.stringify(backupData())'));
+  assert.equal(output.language,'ja');
+  assert.equal(output.items[0].japanese,'水');
+  assert.equal(output.items[0].reading,'みず');
+  assert.equal(output.items[0].romaji,'mizu');
+  assert.equal(output.items[0].seen,1);
+  assert.equal(output.items[0].english,undefined);
+  assert.ok(en.run('backupData().items[0].english'));
+  assert.equal(en.run('backupData().items[0].japanese'),undefined);
+  assert.equal(ja.run('parseItems(backupData())[0].english'),'水');
+  assert.equal(ja.run('parseItems(backupData())[0].romaji'),'mizu');
+});
+
+test('Japanese library search can find kana and romaji', () => {
+  const ja=app('ja');
+  ja.el('search').value='mizu';ja.run('renderLibrary()');
+  assert.match(ja.el('items').innerHTML,/水/);
+  ja.el('search').value='しごと';ja.run('renderLibrary()');
+  assert.match(ja.el('items').innerHTML,/仕事/);
+});
+
+test('reimporting Japanese can fill missing readings without overwriting content or progress', () => {
+  const stored=new Map([['japanese-forge-v1',JSON.stringify([{id:'mine',english:'猫',chinese:'我的中文提示',seen:5,level:3,due:'2026-12-01'}])]]);
+  const ja=app('ja',stored);
+  assert.equal(ja.run('mergeItems(parseItems([{japanese:"猫",reading:"ねこ",romaji:"neko",chinese:"貓"}]))'),0);
+  assert.equal(ja.run('data[0].reading'),'ねこ');
+  assert.equal(ja.run('data[0].romaji'),'neko');
+  assert.equal(ja.run('data[0].seen'),5);
+  assert.equal(ja.run('data[0].chinese'),'我的中文提示');
+  ja.run('mergeItems(parseItems([{japanese:"猫",reading:"wrong",romaji:"wrong",chinese:"wrong"}]))');
+  assert.equal(ja.run('data[0].romaji'),'neko');
+});
+
+test('manual Japanese additions preserve both readings without adding Japanese fields to English', () => {
+  const ja=app('ja');
+  for(const [id,value] of Object.entries({newen:'猫',newzh:'貓',newreading:'ねこ',newromaji:'neko',newkind:'word'}))ja.el(id).value=value;
+  ja.run('addItem()');
+  assert.equal(ja.run('data.find(x=>x.english==="猫").romaji'),'neko');
+  assert.equal(ja.el('newromaji').value,'');
+  const en=app('en');en.el('newen').value='cat';en.el('newzh').value='貓';en.run('addItem()');
+  assert.equal(en.run('data.find(x=>x.english==="cat").romaji'),undefined);
+});
+
+test('old Japanese seed readings are supplemented without changing saved progress or custom material', () => {
+  const stored=new Map([['japanese-forge-v1',JSON.stringify([
+    {id:'ja-seed-0',english:'水',chinese:'水',seen:6,level:4},
+    {id:'custom',english:'駅',chinese:'車站',seen:2},
+  ])]]);
+  const ja=app('ja',stored);
+  assert.equal(ja.run('data[0].romaji'),'mizu');
+  assert.equal(ja.run('data[0].seen'),6);
+  assert.equal(ja.run('data[1].romaji'),undefined);
+});

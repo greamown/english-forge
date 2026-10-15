@@ -49,11 +49,19 @@ Cloud backups keep the original English `items`/`updatedAt` fields under `users/
 ]
 ```
 
-For Japanese, choose the Japanese entry first and import:
+For Japanese, choose the Japanese entry first and import ([sample file](reference/japanese-example.json)):
 ```json
-[{"japanese":"水","chinese":"水","reading":"みず","kind":"word","example":"水をください。"}]
+{
+  "language": "ja",
+  "items": [
+    {"japanese":"水","reading":"みず","romaji":"mizu","chinese":"水","kind":"word"},
+    {"japanese":"水をください。","reading":"みずをください。","romaji":"mizu o kudasai.","chinese":"請給我水。","kind":"sentence"}
+  ]
+}
 ```
-`reading` holds kana and `example` holds a Japanese-only example for playback. Japanese does not infer spoken examples from bilingual notes, because Chinese and Japanese can share characters. Internally, both languages use the legacy `english` text field for compatibility; Japanese imports also accept `japanese` or `ja`. Exported backups include a `language` identifier; importing a labelled backup into the other language is rejected.
+`japanese` holds Japanese text, `reading` holds kana (hiragana or katakana), `romaji` holds the romanized reading, and `chinese` holds the Chinese prompt. `example` optionally holds a Japanese-only example for playback. Romaji is supplied by the material author; it is not generated automatically. Japanese does not infer spoken examples from bilingual notes, because Chinese and Japanese can share characters. Internally, both languages use the legacy `english` text field for compatibility; Japanese imports also accept `japanese` or `ja`. Japanese JSON exports use `japanese`, while English exports retain `english`. Both preserve learning progress and include a `language` identifier; importing a labelled backup into the other language is rejected.
+
+English materials do not need Japanese-only fields. Existing Japanese materials with missing kana or romaji remain usable; reimporting the same Japanese text fills only missing `reading`/`romaji` values, preserving existing text and progress. You can also enter both readings in the Japanese add-material form. Kana and romaji are searchable and hidden alongside the answer during recall.
 
 The importer also accepts objects with `items`, `references`, `vocabulary`, or `sentences` arrays, plus common aliases for English and Chinese fields.
 

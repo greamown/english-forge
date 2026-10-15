@@ -1,0 +1,19 @@
+{
+  "language": "ja",
+  "items": [
+    {
+      "japanese": "水",
+      "reading": "みず",
+      "romaji": "mizu",
+      "chinese": "水",
+      "kind": "word"
+    },
+    {
+      "japanese": "水をください。",
+      "reading": "みずをください。",
+      "romaji": "mizu o kudasai.",
+      "chinese": "請給我水。",
+      "kind": "sentence"
+    }
+  ]
+}
