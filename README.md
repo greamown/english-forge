@@ -1,10 +1,10 @@
-# 語言練習手帳 · English & Japanese
+# LinguaForge · 語言練習手帳
 
 Build your English intuition, one sentence at a time.
 
 A mobile-friendly, local-first English and Japanese practice app hosted on GitHub Pages.
 
-The homepage offers two entries: English keeps the existing EnglishForge experience; Japanese uses the same learning flow with its own vocabulary, sentences, kana readings, and Japanese pronunciation. The GitHub repository and public site URL remain unchanged.
+The homepage offers two entries: English keeps the existing EnglishForge experience; Japanese uses the same learning flow with its own vocabulary, sentences, kana readings, and Japanese pronunciation. The repository is `greamown/lingua-forge`; the English learning space still uses existing EnglishForge records.
 
 ## Features
 - Language selector homepage with separate English (`practice.html?lang=en`) and Japanese (`practice.html?lang=ja`) learning spaces
@@ -26,7 +26,7 @@ The homepage offers two entries: English keeps the existing EnglishForge experie
 Open `index.html` in a modern browser, or enable GitHub Pages in **Settings → Pages → Deploy from a branch → main → /(root)**.
 
 When Pages is enabled, the expected URL is:
-https://greamown.github.io/english-forge/
+https://greamown.github.io/lingua-forge/
 
 ## Checks
 Run `node --test tests/*.test.cjs` (Node.js 18+; no dependencies). These checks cover session restart, direct navigation, answer/skip handling, review counts, self-assessment, library filtering, material types, shadowing, speech error handling, Japanese text matching, and cloud backup isolation.
