@@ -11,6 +11,7 @@
 @media(max-width:1100px){.main{padding:24px 30px}.sidebar{width:210px;padding-left:14px;padding-right:14px}.hero{gap:20px;padding:28px}.hero h2{font-size:24px}.preview-card{padding:18px}.preview-card blockquote{font-size:23px}.home-bottom{grid-template-columns:1fr;gap:0}.steps{grid-template-columns:repeat(3,1fr)}.import-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.shell{display:block}.sidebar{position:static;width:100%;height:auto;padding:18px 20px 0;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0 0 16px;font-size:22px}.brand small{font-size:9px}.nav-label,.side-note{display:none}.menu{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;padding-bottom:12px}.nav{width:100%;white-space:nowrap;flex-direction:column;gap:5px;padding:9px 0;font-size:11px;text-align:center}.nav-index{display:none}.nav svg{width:17px;height:17px}.main{padding:20px}.topbar{font-size:9px;margin-bottom:25px;padding-bottom:16px}.topbar span:first-child{letter-spacing:1px}.heading{font-size:29px;letter-spacing:-.9px}.intro{font-size:13px}.hero{margin-top:24px;padding:26px;gap:24px;grid-template-columns:1fr}.hero h2{font-size:25px}.practice-preview{padding:8px 12px 12px}.preview-card{max-width:100%;transform:rotate(-2deg)}.preview-card blockquote{font-size:25px;margin:14px 0 7px}.preview-bottom{margin-top:14px}.grid{gap:8px}.stat-card{padding:14px 12px}.stat-label{font-size:11px}.stat-label svg{display:none}.stat{font-size:31px}.stat-card>small{font-size:10px;line-height:1.6;display:block}.stat small{font-size:10px;margin-left:3px}.steps{grid-template-columns:1fr;gap:13px}.home-bottom{gap:0}.sectionhead{margin-top:24px}.footer{font-size:9px;flex-direction:column;gap:3px;margin-top:26px}.session-layout{margin-top:23px}.card{padding:23px 20px}.studyword{font-size:25px}.rating{gap:6px}.rating button{font-size:12px;padding:12px 3px}.rating button small{font-size:9px}.answer-panel{padding:16px}.list{grid-template-columns:1fr}.searchbar{gap:10px;flex-wrap:wrap}.search-input{min-width:100%}.searchbar .btn{width:100%}.import-grid{gap:16px}.complete{padding:35px 20px}.complete h2{font-size:23px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.practice-choice{display:flex;align-items:center;gap:14px;margin-top:24px;font-size:12px;color:var(--muted);flex-wrap:wrap}.practice-choice select{width:auto;min-width:200px;max-width:100%}.pronunciation{border-top:1px solid #d5deca;margin-top:18px;padding-top:12px}.pronunciation .actions{margin-top:12px}.item .actions{margin-top:14px}.item-kind{padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--muted);font-size:11px;max-width:125px;min-height:36px}.hero .practice-links{display:flex;gap:20px;margin-top:16px}.hero .practice-links button{color:#e0e7ca;font-size:12px}
 </style>
 </head>
 <body>
@@ -43,24 +44,27 @@
 </aside>
 <main class="main" id="content" tabindex="-1">
 <div class="topbar"><span>YOUR ENGLISH, A LITTLE BETTER.</span><time id="today"></time></div>
+<p id="speechstatus" class="storage-status hidden" role="status"></p>
 <p id="storageStatus" class="storage-status hidden" role="status"></p>
 <section id="home" class="fade-in" aria-labelledby="home-title">
 <p class="eyebrow">A LITTLE PRACTICE, EVERY DAY</p><h1 class="heading" id="home-title" tabindex="-1">每天一點，<em>英文更自然。</em></h1><p class="muted intro">從看懂一句，到自己說出來。今天也留一點時間，<br>讓學過的英文真正成為你的。</p>
-<div class="hero"><div><span class="tag" id="daytag">今日練習</span><h2 id="plan">從 2 個新句開始</h2><p class="hint" id="plandesc">先複習，再學新句；看著中文，試著把英文說出口。</p><div class="actions"><button class="btn light" onclick="startStudy()">開始今日學習<svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="btn outline" onclick="startQuiz()">直接測驗</button></div></div><div class="practice-preview" aria-label="練習示例"><div class="preview-card"><div class="preview-top"><span>ONE SENTENCE AT A TIME</span><svg aria-hidden="true"><use href="#i-book"/></svg></div><blockquote lang="en">Let's clarify<br>the goal first.</blockquote><p>我們先釐清目標。</p><div class="preview-bottom"><span>看懂 → 回想 → 說出口</span><span>01 / ∞</span></div></div></div></div>
-<div class="grid"><div class="stat-card"><div class="stat-label">累積的句子<svg aria-hidden="true"><use href="#i-book"/></svg></div><div class="stat"><span id="total">0</span><small>句</small></div><small>每一句，都是你的累積</small></div><div class="stat-card"><div class="stat-label">到期複習<svg aria-hidden="true"><use href="#i-clock"/></svg></div><div class="stat"><span id="due">0</span><small>句</small></div><small>學過、現在該回想的句子</small></div><div class="stat-card"><div class="stat-label">逐漸熟悉<svg aria-hidden="true"><use href="#i-check"/></svg></div><div class="stat"><span id="mastered">0</span><small>句</small></div><small>自評熟練度達 4 級以上</small></div></div>
+<div class="hero"><div><span class="tag" id="daytag">今日練習</span><h2 id="plan">從 2 個新句開始</h2><p class="hint" id="plandesc">先複習，再學新句；看著中文，試著把英文說出口。</p><div class="actions"><button class="btn light" onclick="startStudy()">開始今日學習<svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="btn outline" onclick="startQuiz()">直接測驗</button></div><div class="practice-links"><button class="text-btn" onclick="setPracticeKind('word','study')">練單字與片語 ↗</button><button class="text-btn" onclick="setPracticeKind('sentence','study')">練完整句子 ↗</button></div></div><div class="practice-preview" aria-label="練習示例"><div class="preview-card"><div class="preview-top"><span>ONE SENTENCE AT A TIME</span><svg aria-hidden="true"><use href="#i-book"/></svg></div><blockquote lang="en">Let's clarify<br>the goal first.</blockquote><p>我們先釐清目標。</p><div class="preview-bottom"><span>看懂 → 回想 → 說出口</span><span>01 / ∞</span></div></div></div></div>
+<div class="grid"><div class="stat-card"><div class="stat-label">累積的教材<svg aria-hidden="true"><use href="#i-book"/></svg></div><div class="stat"><span id="total">0</span><small>項</small></div><small>每一項，都是你的累積</small></div><div class="stat-card"><div class="stat-label">到期複習<svg aria-hidden="true"><use href="#i-clock"/></svg></div><div class="stat"><span id="due">0</span><small>項</small></div><small>學過、現在該回想的教材</small></div><div class="stat-card"><div class="stat-label">逐漸熟悉<svg aria-hidden="true"><use href="#i-check"/></svg></div><div class="stat"><span id="mastered">0</span><small>項</small></div><small>自評熟練度達 4 級以上</small></div></div>
 <div class="home-bottom"><div><div class="sectionhead"><h2>一週的練習節奏</h2><span>慢慢來，記得更牢</span></div><div class="week" id="week"></div><p class="week-caption">這是每日建議，不是打卡紀錄。隨時都可以自由練習。</p></div><div><div class="sectionhead"><h2>怎麼練，才記得住？</h2></div><ol class="steps"><li><div><strong>看中文，先試著說英文</strong><small>想不起來也沒關係，回想就是練習。</small></div></li><li><div><strong>翻開答案，聽一次、跟讀一次</strong><small>把句子的意思和聲音一起記住。</small></div></li><li><div><strong>選擇熟悉程度，安排下次複習</strong><small>依照真實感受選，不需要每題都答對。</small></div></li></ol></div></div>
 </section>
-<section id="study" class="hidden" aria-labelledby="study-title"><p class="eyebrow">01 / LEARN & REMEMBER</p><h1 class="heading" id="study-title" tabindex="-1">先回想，再把答案翻開。</h1><p class="muted intro">看著中文提示，試著說一句英文。想不起來，就從跟讀開始。</p>
-<div class="session-layout"><div class="session-top"><span id="studycount">今日學習</span><button class="text-btn" onclick="showTab('home')">稍後再練習 ↗</button></div><progress id="studyprogress" value="0" max="1" aria-label="學習完成進度"></progress>
-<div class="card" id="studybox"><div class="row"><span class="tag" id="studytag">學習</span><span class="kbd" id="studynum"></span></div><p class="prompt-label">中文提示 · 試著用英文說說看</p><div class="studyword" id="studyprompt"></div><div id="studyanswer" class="answer-panel hidden" aria-live="polite"><p class="answer-label">REFERENCE / 參考句子</p><div class="english" id="studyenglish" lang="en"></div><p class="hint" id="studyextra"></p></div><div class="actions"><button class="btn" id="revealBtn" onclick="revealStudy()">翻開英文答案<svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="btn secondary" onclick="speakCurrent()"><svg aria-hidden="true"><use href="#i-sound"/></svg>聽英文</button></div><div id="studygrade" class="rating-wrap hidden"><p class="rating-label">這一句，你有多熟悉？選擇後會進入下一句。</p><div class="rating"><button class="btn outline again" onclick="grade(0)">還想不起來<small>今天再複習</small></button><button class="btn outline" onclick="grade(1)">有點印象<small>明天再練一次</small></button><button class="btn" onclick="grade(2)">可以說出來<small>延長複習間隔</small></button></div></div></div>
-<div class="card complete hidden" id="studydone" role="status"><div class="complete-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></div><p class="eyebrow">SMALL STEPS, REAL PROGRESS</p><h2>今天又多熟悉了幾句。</h2><p class="muted" id="studysummary"></p><div class="actions"><button class="btn" onclick="startQuiz()">用測驗回想一次 →</button><button class="btn outline" onclick="startStudy()">再練一輪</button><button class="text-btn" onclick="showTab('home')">回今日學習</button></div></div>
-<p class="session-tip"><svg aria-hidden="true"><use href="#i-bulb"/></svg>小提醒：先自己回想，再聽發音。選「還想不起來」會保留為今天待複習。</p></div></section>
-<section id="quiz" class="hidden" aria-labelledby="quiz-title"><p class="eyebrow">02 / PUT IT INTO WORDS</p><h1 class="heading" id="quiz-title" tabindex="-1">換你，把英文說出來。</h1><p class="muted intro">先試著開口，再寫下你想到的英文。不求一字不差，先練習表達意思。</p>
-<div class="session-layout"><div class="session-top"><span>中翻英 · 主動回想</span><button class="text-btn" onclick="showTab('home')">稍後再測驗 ↗</button></div><progress id="quizprogress" value="0" max="1" aria-label="測驗完成進度"></progress><div class="card" id="quizbox"><div class="row"><span class="tag" id="quiztag">回想測驗</span><span class="kbd" id="quiznum"></span></div><p class="prompt-label">把這句中文，用英文表達</p><div class="studyword" id="quizprompt"></div><label class="field-label" for="quizinput">你的英文答案</label><textarea class="field quiz-field" id="quizinput" rows="3" placeholder="Take your time. 試著寫下你想到的英文…" aria-describedby="quizhelp"></textarea><p class="field-help" id="quizhelp">寫完後檢查答案；想不起來，也可以直接看參考句。</p><div id="quizresult" class="answer-panel hidden" aria-live="polite"><p class="answer-label">REFERENCE / 參考答案</p><div class="english" id="quizanswer" lang="en"></div><p id="quizfeedback" class="feedback"></p></div><div class="actions"><button class="btn" id="checkBtn" onclick="checkQuiz()">檢查我的答案<svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="text-btn" id="skipBtn" onclick="checkQuiz(true)">想不起來，看看答案</button><button class="btn secondary hidden" id="quizSpeak" onclick="speakQuiz()"><svg aria-hidden="true"><use href="#i-sound"/></svg>聽參考句</button><button class="btn hidden" id="nextBtn" onclick="nextQuiz()">下一題 →</button></div><div id="quizgrade" class="rating-wrap hidden"><p class="rating-label">對照意思後，替自己評估一下。這會更新複習安排。</p><div class="rating"><button class="btn outline again" onclick="quizGrade(0)">還想不起來<small>今天再複習</small></button><button class="btn outline" onclick="quizGrade(1)">需要再練<small>明天再複習</small></button><button class="btn" onclick="quizGrade(2)">我能表達<small>延長複習間隔</small></button></div></div></div>
+<section id="study" class="hidden" aria-labelledby="study-title"><p class="eyebrow">01 / LEARN & REMEMBER</p><h1 class="heading" id="study-title" tabindex="-1">單字與句子，都練到能說出口。</h1><p class="muted intro">看中文回想，翻開後先聽、再慢速跟讀，最後遮住英文自己說一次。</p>
+<div class="practice-choice"><label for="studykind">這次想練什麼？</label><select class="field practice-kind" id="studykind" onchange="setPracticeKind(this.value,'study')"><option value="all">單字＋句子混合練習</option><option value="word">單字與片語</option><option value="sentence">完整句子</option></select></div><div class="session-layout"><div class="session-top"><span id="studycount">今日學習</span><button class="text-btn" onclick="showTab('home')">稍後再練習 ↗</button></div><progress id="studyprogress" value="0" max="1" aria-label="學習完成進度"></progress>
+<div class="card" id="studybox"><div class="row"><span class="tag" id="studytag">學習</span><span class="kbd" id="studynum"></span></div><p class="prompt-label">中文提示 · 試著用英文說說看</p><div class="studyword" id="studyprompt"></div><div id="studyanswer" class="answer-panel hidden" aria-live="polite"><p class="answer-label">REFERENCE / 參考英文</p><div class="english" id="studyenglish" lang="en"></div><p class="hint" id="studyextra"></p><div class="pronunciation"><p class="hint" id="pronunciationtip"></p><div class="actions"><button class="btn secondary" onclick="speakCurrent(1)"><svg aria-hidden="true"><use href="#i-sound"/></svg>正常發音</button><button class="btn outline" onclick="speakCurrent(0.7)">慢速跟讀</button><button class="text-btn" id="hideEnglish" onclick="toggleStudyText()">遮住英文再說一次</button></div><div class="actions hidden" id="studyExampleAudio"><button class="btn secondary" onclick="speakStudyExample(1)">例句發音</button><button class="btn outline" onclick="speakStudyExample(0.7)">例句慢速跟讀</button></div></div></div><div class="actions"><button class="btn" id="revealBtn" onclick="revealStudy()">翻開英文答案<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div id="studygrade" class="rating-wrap hidden"><p class="rating-label">這一項，你有多熟悉？選擇後會進入下一項。</p><div class="rating"><button class="btn outline again" onclick="grade(0)">還想不起來<small>今天再複習</small></button><button class="btn outline" onclick="grade(1)">有點印象<small>明天再練一次</small></button><button class="btn" onclick="grade(2)">可以說出來<small>延長複習間隔</small></button></div></div></div>
+<div class="card empty hidden" id="studyempty"><h2>這個類型還沒有教材。</h2><p>新增單字與中文意思，或匯入含單字／句子的教材，就能開始練習。</p><div class="actions"><button class="btn" onclick="showTab('import')">新增教材</button><button class="btn outline" onclick="setPracticeKind('all','study')">練習全部教材</button></div></div>
+<div class="card complete hidden" id="studydone" role="status"><div class="complete-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></div><p class="eyebrow">SMALL STEPS, REAL PROGRESS</p><h2>今天又多熟悉了一點。</h2><p class="muted" id="studysummary"></p><div class="actions"><button class="btn" onclick="startQuiz()">用測驗回想一次 →</button><button class="btn outline" onclick="startStudy()">再練一輪</button><button class="text-btn" onclick="showTab('home')">回今日學習</button></div></div>
+<p class="session-tip"><svg aria-hidden="true"><use href="#i-bulb"/></svg>小提醒：單字留意重音，句子留意節奏。跟讀後請自行評估熟悉程度，這裡不會自動評分發音。</p></div></section>
+<section id="quiz" class="hidden" aria-labelledby="quiz-title"><p class="eyebrow">02 / PUT IT INTO WORDS</p><h1 class="heading" id="quiz-title" tabindex="-1">換你，把英文說出來。</h1><p class="muted intro">單字練意思與拼寫，句子練完整表達。先試著開口，再寫下你想到的英文。</p>
+<div class="practice-choice"><label for="quizkind">這次想練什麼？</label><select class="field practice-kind" id="quizkind" onchange="setPracticeKind(this.value,'quiz')"><option value="all">單字＋句子混合練習</option><option value="word">單字與片語</option><option value="sentence">完整句子</option></select></div><div class="session-layout"><div class="session-top"><span>中翻英 · 主動回想</span><button class="text-btn" onclick="showTab('home')">稍後再測驗 ↗</button></div><progress id="quizprogress" value="0" max="1" aria-label="測驗完成進度"></progress><div class="card" id="quizbox"><div class="row"><span class="tag" id="quiztag">回想測驗</span><span class="kbd" id="quiznum"></span></div><p class="prompt-label">中文提示 · 回想對應的英文</p><div class="studyword" id="quizprompt"></div><label class="field-label" for="quizinput">你的英文答案</label><textarea class="field quiz-field" id="quizinput" rows="3" placeholder="Take your time. 試著寫下你想到的英文…" aria-describedby="quizhelp"></textarea><p class="field-help" id="quizhelp">寫完後檢查答案；想不起來，也可以直接看參考句。</p><div id="quizresult" class="answer-panel hidden" aria-live="polite"><p class="answer-label">REFERENCE / 參考答案</p><div class="english" id="quizanswer" lang="en"></div><p id="quizfeedback" class="feedback"></p></div><div class="actions"><button class="btn" id="checkBtn" onclick="checkQuiz()">檢查我的答案<svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="text-btn" id="skipBtn" onclick="checkQuiz(true)">想不起來，看看答案</button><button class="btn secondary hidden" id="quizSpeak" onclick="speakQuiz(1)"><svg aria-hidden="true"><use href="#i-sound"/></svg>正常發音</button><button class="btn outline hidden" id="quizSlow" onclick="speakQuiz(0.7)">慢速跟讀</button><button class="btn hidden" id="nextBtn" onclick="nextQuiz()">下一題 →</button></div><div id="quizgrade" class="rating-wrap hidden"><p class="rating-label">對照意思後，替自己評估一下。這會更新複習安排。</p><div class="rating"><button class="btn outline again" onclick="quizGrade(0)">還想不起來<small>今天再複習</small></button><button class="btn outline" onclick="quizGrade(1)">需要再練<small>明天再複習</small></button><button class="btn" onclick="quizGrade(2)">我能表達<small>延長複習間隔</small></button></div></div></div>
+<div class="card empty hidden" id="quizempty"><h2>這個類型還沒有題目。</h2><p>先新增教材，或切換成混合練習。</p><div class="actions"><button class="btn" onclick="showTab('import')">新增教材</button><button class="btn outline" onclick="setPracticeKind('all','quiz')">測驗全部教材</button></div></div>
 <div class="card complete hidden" id="quizdone" role="status"><div class="complete-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></div><p class="eyebrow">YOU SHOWED UP. THAT COUNTS.</p><h2>回想完成，每次練習都算數。</h2><p class="muted" id="quizsummary"></p><div class="complete-summary" id="quizbreakdown"></div><p class="hint">這是你的自評結果，不是文法評分。忘記的句子會留在待複習清單。</p><div class="actions"><button class="btn" onclick="startQuiz()">再測驗一次 →</button><button class="btn outline" onclick="startStudy()">回到學習卡片</button><button class="text-btn" onclick="showTab('home')">回今日學習</button></div></div>
 <p class="session-tip"><svg aria-hidden="true"><use href="#i-bulb"/></svg>同一個意思有很多種說法。系統只比對文字，語意與文法請對照參考句自行確認。</p></div></section>
-<section id="library" class="hidden" aria-labelledby="library-title"><p class="eyebrow">YOUR GROWING COLLECTION</p><h1 class="heading" id="library-title" tabindex="-1">每一句，都是你的累積。</h1><p class="muted intro">找找熟悉的句子，或挑出還需要練習的。一點一點，整理自己的英文。</p><div class="searchbar"><div class="search-input"><svg aria-hidden="true"><use href="#i-search"/></svg><input class="field" id="search" type="search" aria-label="搜尋題庫" placeholder="搜尋英文、中文或分類…" oninput="renderLibrary()"></div><button class="btn outline" onclick="showTab('import')">＋ 新增教材</button></div><div class="filters" aria-label="依學習狀態篩選"><button class="filter" data-filter="all" aria-pressed="true" onclick="setFilter('all')">全部句子</button><button class="filter" data-filter="fresh" aria-pressed="false" onclick="setFilter('fresh')">還沒學過</button><button class="filter" data-filter="due" aria-pressed="false" onclick="setFilter('due')">到期複習</button><button class="filter" data-filter="mastered" aria-pressed="false" onclick="setFilter('mastered')">逐漸熟悉</button></div><div class="sectionhead"><h2>我的句子收藏</h2><span id="librarycount" role="status"></span></div><div class="list" id="items"></div></section>
-<section id="import" class="hidden" aria-labelledby="import-title"><p class="eyebrow">MAKE IT YOUR OWN</p><h1 class="heading" id="import-title" tabindex="-1">把想學的，放進手帳。</h1><p class="muted intro">新增一句日常英文，或匯入整理好的教材。相同的英文會自動略過。</p><p id="importstatus" class="import-status" role="status"></p><div class="import-grid"><div class="card"><div class="import-card-number">01 / ADD A SENTENCE</div><h2>從一句想學的英文開始</h2><p class="hint">寫下英文和中文意思，就能加入學習與測驗。</p><form class="form-grid" onsubmit="event.preventDefault();addItem()"><div><label class="field-label" for="newen">英文句子</label><input class="field" id="newen" placeholder="例如：Let me think about it." required></div><div><label class="field-label" for="newzh">中文提示</label><input class="field" id="newzh" placeholder="例如：讓我想一想。" required></div><button class="btn" type="submit">加入我的題庫<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></form><div class="notice">提示：用你真的會用到的句子，例如工作對話、旅行問路，回想時更容易連結情境。</div></div><div class="import-right"><div class="card"><div class="import-card-number">02 / IMPORT MATERIALS</div><h2>一次加入多筆教材</h2><p class="hint">選擇整理好的 JSON 檔案，也可以直接貼上內容。</p><label class="upload"><svg aria-hidden="true"><use href="#i-upload"/></svg><strong>選擇 JSON 教材檔</strong><small>相同英文會自動略過，既有紀錄會保留</small><input type="file" aria-label="選擇 JSON 教材檔" accept=".json,application/json" class="file-input" onchange="importFile(event)"></label><details><summary>貼上 JSON ／ 查看格式說明</summary><p class="hint">每筆需包含英文 english；建議加上中文 chinese，作為回想提示。</p><code>[{"english":"Let me think about it.","chinese":"讓我想一想。"}]</code><label class="field-label" for="jsoninput" style="margin-top:14px">JSON 內容</label><textarea id="jsoninput" class="field" rows="6" placeholder='[{"english":"…","chinese":"…"}]'></textarea><button class="btn secondary" onclick="importText()" style="margin-top:12px">匯入貼上的內容</button><p class="field-help">也接受 items / references / vocabulary / sentences 陣列。</p></details></div><div class="card"><div class="import-card-number">03 / KEEP A COPY</div><h2>替學習紀錄留一份備份</h2><p class="hint">題庫與進度預設儲存在此瀏覽器。可下載 JSON，或登入 Google 手動備份到雲端。</p><button class="btn outline backup-btn" onclick="exportData()">下載題庫與進度備份 ↓</button><p class="field-help">備份包含熟練度與複習日期。請妥善保管下載的檔案。</p></div><div class="card cloud-backup"><div class="import-card-number">04 / PRIVATE CLOUD BACKUP</div><div class="row"><h2>私人雲端備份</h2><span class="tag">Google 登入</span></div><p class="hint">登入後，可手動備份題庫與進度，或在其他裝置還原。</p><p class="notice" id="firebaseStatus" role="status">載入 Firebase 設定中…</p><div class="actions"><button class="btn" id="firebaseLogin">使用 Google 登入</button><button class="btn" id="firebaseUpload" hidden>備份到雲端</button><button class="btn secondary" id="firebaseDownload" hidden>從雲端還原</button><button class="btn outline" id="firebaseLogout" hidden>登出</button></div><p class="field-help">這是手動備份，不會自動同步。還原會覆蓋此瀏覽器的題庫與進度，建議先下載本機備份。</p></div></div></div></section>
+<section id="library" class="hidden" aria-labelledby="library-title"><p class="eyebrow">YOUR GROWING COLLECTION</p><h1 class="heading" id="library-title" tabindex="-1">每一項，都是你的累積。</h1><p class="muted intro">單字與句子都能聽發音、慢速跟讀。找找熟悉的，或挑出需要再練習的。</p><div class="searchbar"><div class="search-input"><svg aria-hidden="true"><use href="#i-search"/></svg><input class="field" id="search" type="search" aria-label="搜尋題庫" placeholder="搜尋英文、中文或分類…" oninput="renderLibrary()"></div><button class="btn outline" onclick="showTab('import')">＋ 新增教材</button></div><div class="filters" aria-label="依學習狀態篩選"><button class="filter" data-filter="all" aria-pressed="true" onclick="setFilter('all')">全部教材</button><button class="filter" data-filter="fresh" aria-pressed="false" onclick="setFilter('fresh')">還沒學過</button><button class="filter" data-filter="due" aria-pressed="false" onclick="setFilter('due')">到期複習</button><button class="filter" data-filter="mastered" aria-pressed="false" onclick="setFilter('mastered')">逐漸熟悉</button></div><div class="practice-choice"><label for="librarykind">教材類型</label><select class="field practice-kind" id="librarykind" onchange="setPracticeKind(this.value,'library')"><option value="all">全部單字與句子</option><option value="word">單字與片語</option><option value="sentence">完整句子</option></select></div><p class="field-help">未標示類型的教材會依句尾標點初步分類；可用每張卡片的類型選單修正，學習進度會保留。</p><div class="sectionhead"><h2>我的英文收藏</h2><span id="librarycount" role="status"></span></div><div class="list" id="items"></div></section>
+<section id="import" class="hidden" aria-labelledby="import-title"><p class="eyebrow">MAKE IT YOUR OWN</p><h1 class="heading" id="import-title" tabindex="-1">把想學的，放進手帳。</h1><p class="muted intro">新增一個單字或一句日常英文，或匯入整理好的教材。相同的英文會自動略過。</p><p id="importstatus" class="import-status" role="status"></p><div class="import-grid"><div class="card"><div class="import-card-number">01 / ADD A SENTENCE</div><h2>從想學的單字或句子開始</h2><p class="hint">寫下英文單字／句子和中文意思，就能加入學習與測驗。</p><form class="form-grid" onsubmit="event.preventDefault();addItem()"><div><label class="field-label" for="newen">英文單字或句子</label><input class="field" id="newen" placeholder="例如：Let me think about it." required></div><div><label class="field-label" for="newzh">中文提示</label><input class="field" id="newzh" placeholder="例如：讓我想一想。" required></div><div><label class="field-label" for="newkind">教材類型</label><select class="field" id="newkind"><option value="auto">自動辨識</option><option value="word">單字與片語</option><option value="sentence">完整句子</option></select></div><button class="btn" type="submit">加入我的題庫<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></form><div class="notice">提示：用你真的會用到的句子，例如工作對話、旅行問路，回想時更容易連結情境。</div></div><div class="import-right"><div class="card"><div class="import-card-number">02 / IMPORT MATERIALS</div><h2>一次加入多筆教材</h2><p class="hint">選擇整理好的 JSON 檔案，也可以直接貼上內容。</p><label class="upload"><svg aria-hidden="true"><use href="#i-upload"/></svg><strong>選擇 JSON 教材檔</strong><small>相同英文會自動略過，既有紀錄會保留</small><input type="file" aria-label="選擇 JSON 教材檔" accept=".json,application/json" class="file-input" onchange="importFile(event)"></label><details><summary>貼上 JSON ／ 查看格式說明</summary><p class="hint">每筆需包含英文 english；建議加上中文 chinese，作為回想提示。</p><code>[{"english":"Let me think about it.","chinese":"讓我想一想。"}]</code><label class="field-label" for="jsoninput" style="margin-top:14px">JSON 內容</label><textarea id="jsoninput" class="field" rows="6" placeholder='[{"english":"…","chinese":"…"}]'></textarea><button class="btn secondary" onclick="importText()" style="margin-top:12px">匯入貼上的內容</button><p class="field-help">也接受 items / references / vocabulary / sentences 陣列。</p></details></div><div class="card"><div class="import-card-number">03 / KEEP A COPY</div><h2>替學習紀錄留一份備份</h2><p class="hint">題庫與進度預設儲存在此瀏覽器。可下載 JSON，或登入 Google 手動備份到雲端。</p><button class="btn outline backup-btn" onclick="exportData()">下載題庫與進度備份 ↓</button><p class="field-help">備份包含熟練度與複習日期。請妥善保管下載的檔案。</p></div><div class="card cloud-backup"><div class="import-card-number">04 / PRIVATE CLOUD BACKUP</div><div class="row"><h2>私人雲端備份</h2><span class="tag">Google 登入</span></div><p class="hint">登入後，可手動備份題庫與進度，或在其他裝置還原。</p><p class="notice" id="firebaseStatus" role="status">載入 Firebase 設定中…</p><div class="actions"><button class="btn" id="firebaseLogin">使用 Google 登入</button><button class="btn" id="firebaseUpload" hidden>備份到雲端</button><button class="btn secondary" id="firebaseDownload" hidden>從雲端還原</button><button class="btn outline" id="firebaseLogout" hidden>登出</button></div><p class="field-help">這是手動備份，不會自動同步。還原會覆蓋此瀏覽器的題庫與進度，建議先下載本機備份。</p></div></div></div></section>
 <div class="footer"><span>EnglishForge / One sentence at a time.</span><span>在自己的節奏裡，把英文練成直覺。</span></div>
 </main></div>
 <script>
@@ -79,6 +83,7 @@ const KEY="english-forge-v1";const demo=[
 let data;try{let saved=JSON.parse(localStorage.getItem(KEY));data=Array.isArray(saved)?saved:demo}catch{data=demo}
 let studyQueue=[],studyIndex=0,quizQueue=[],quizIndex=0;
 let libraryFilter="all",quizRatings=[0,0,0],quizRated=false;
+let practiceKind="all",studyStarted=false,quizStarted=false;
 const $=id=>document.getElementById(id);const norm=s=>(s||"").toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9\s]/g,"").replace(/\s+/g," ").trim();
 function save(){
   try{localStorage.setItem(KEY,JSON.stringify(data));$("storageStatus").classList.add("hidden")}
@@ -89,16 +94,33 @@ function localDay(d=new Date()){return d.getFullYear()+"-"+String(d.getMonth()+1
 function dueItems(){return data.filter(x=>!x.due||x.due<=localDay())}
 function schedule(x,g){x.seen=(x.seen||0)+1;x.level=g===0?0:g===1?Math.max(1,(x.level||0)):Math.min(6,(x.level||0)+1);const days=g===0?0:g===1?1:[0,1,3,7,14,30,60][x.level];let date=new Date();date.setDate(date.getDate()+days);x.due=localDay(date);save()}
 function showTab(tab){
-  if(tab==="study"&&!studyQueue.length){startStudy();return}
-  if(tab==="quiz"&&!quizQueue.length){startQuiz();return}
+  stopSpeech();
+  if(tab==="study"&&!studyStarted){startStudy();return}
+  if(tab==="quiz"&&!quizStarted){startQuiz();return}
   document.querySelectorAll("main section").forEach(e=>e.classList.toggle("hidden",e.id!==tab));
   document.querySelectorAll(".nav").forEach(e=>{e.classList.toggle("active",e.dataset.tab===tab);if(e.dataset.tab===tab)e.setAttribute("aria-current","page");else e.removeAttribute("aria-current")});
   if(tab==="library")renderLibrary();if(tab==="home")renderHome();
   $(tab+"-title").focus({preventScroll:true});window.scrollTo(0,0);
 }
 document.querySelectorAll(".nav").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+function itemKind(item){
+  if(item.kind==="word"||item.kind==="sentence")return item.kind;
+  // shortcut: untyped material uses sentence-ending punctuation; correct ambiguous phrases in the library.
+  return /[.!?]["'”’)]*$/.test(item.english.trim())?"sentence":"word";
+}
+function practiceItems(){return data.filter(x=>practiceKind==="all"||itemKind(x)===practiceKind)}
+function setPracticeKind(kind,tab){
+  if(!["all","word","sentence"].includes(kind))return;
+  practiceKind=kind;studyStarted=false;quizStarted=false;studyQueue=[];quizQueue=[];
+  document.querySelectorAll(".practice-kind").forEach(select=>select.value=kind);
+  showTab(tab);
+}
+function setItemKind(index,kind){
+  if(!data[index]||!["word","sentence"].includes(kind))return;
+  data[index].kind=kind;save();studyStarted=false;quizStarted=false;studyQueue=[];quizQueue=[];renderLibrary();
+}
 function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
-function pickQueue(limit=10){let due=shuffle(dueItems().filter(x=>x.seen));let fresh=shuffle(data.filter(x=>!x.seen));let extra=shuffle(data.filter(x=>!due.includes(x)&&!fresh.includes(x)));return [...due,...fresh,...extra].slice(0,limit)}
+function pickQueue(limit=10){const pool=practiceItems(),due=shuffle(pool.filter(x=>x.seen&&(!x.due||x.due<=localDay()))),fresh=shuffle(pool.filter(x=>!x.seen)),extra=shuffle(pool.filter(x=>!due.includes(x)&&!fresh.includes(x)));return [...due,...fresh,...extra].slice(0,limit)}
 function renderHome(){
   const now=new Date(),day=now.getDay();
   $("today").textContent=new Intl.DateTimeFormat("zh-TW",{month:"long",day:"numeric",weekday:"long"}).format(now);
@@ -108,27 +130,32 @@ function renderHome(){
   $("mastered").textContent=data.filter(x=>x.level>=4).length;
   $("daytag").textContent=["星期日 · 長期複習","星期一 · 新的一週","星期二 · 穩定累積","星期三 · 走到一半了","星期四 · 再熟悉一點","星期五 · 本週最後的新句","星期六 · 週末回想"][day];
   const fresh=data.filter(x=>!x.seen).length;
-  $("plan").textContent=!data.length?"從你的第一句英文開始":day===6?"把學過的，重新想一次。":day===0?"週末，找回不熟悉的句子。":fresh?"今天，從 "+Math.min(2,fresh)+" 個新句開始。":"今天，把學過的再說一次。";
-  $("plandesc").textContent=!data.length?"先到教材頁新增句子或匯入教材，再開始練習。":day>=1&&day<=5?"先複習最多 3 句，再學 2 個新句。看著中文，試著把英文說出口。":"最多練習 10 句。不急著翻答案，給自己一點回想的時間。";
-  $("week").innerHTML=["日","一","二","三","四","五","六"].map((x,i)=>'<div class="'+(i===day?"now":"")+'"'+(i===day?' aria-current="date"':"")+'><b>週'+x+'</b>'+(i===0?"複習":i===6?"回想":"＋2 句")+'</div>').join("");
+  $("plan").textContent=!data.length?"從你的第一句英文開始":day===6?"把學過的，重新想一次。":day===0?"週末，找回不熟悉的單字與句子。":fresh?"今天，從 "+Math.min(2,fresh)+" 個新項目開始。":"今天，把學過的再說一次。";
+  $("plandesc").textContent=!data.length?"先到教材頁新增句子或匯入教材，再開始練習。":day>=1&&day<=5?"先複習最多 3 項，再學 2 個新項目。看著中文，試著把英文說出口。":"最多練習 10 項。不急著翻答案，給自己一點回想的時間。";
+  $("week").innerHTML=["日","一","二","三","四","五","六"].map((x,i)=>'<div class="'+(i===day?"now":"")+'"'+(i===day?' aria-current="date"':"")+'><b>週'+x+'</b>'+(i===0?"複習":i===6?"回想":"＋2 項")+'</div>').join("");
 }
 function startStudy(){
   if(!data.length){showTab("import");return}
-  const day=new Date().getDay(),fresh=shuffle(data.filter(x=>!x.seen)),old=shuffle(dueItems().filter(x=>x.seen));
-  studyQueue=day===6?shuffle(data.filter(x=>x.seen)).slice(0,10):day===0?shuffle(data).sort((a,b)=>(a.level||0)-(b.level||0)).slice(0,10):[...old.slice(0,3),...fresh.slice(0,2)];
+  const pool=practiceItems(),day=new Date().getDay(),fresh=shuffle(pool.filter(x=>!x.seen)),old=shuffle(pool.filter(x=>x.seen&&(!x.due||x.due<=localDay())));
+  studyQueue=day===6?shuffle(pool.filter(x=>x.seen)).slice(0,10):day===0?shuffle(pool).sort((a,b)=>(a.level||0)-(b.level||0)).slice(0,10):[...old.slice(0,3),...fresh.slice(0,2)];
   if(!studyQueue.length)studyQueue=pickQueue(5);
-  studyIndex=0;showTab("study");renderStudy();
+  studyIndex=0;studyStarted=true;showTab("study");renderStudy();
 }
 function renderStudy(){
-  const x=studyQueue[studyIndex];
-  $("studyprogress").max=studyQueue.length;$("studyprogress").value=studyIndex;
-  $("studycount").textContent="今日學習 · "+studyQueue.length+" 句";
-  $("studybox").classList.toggle("hidden",!x);$("studydone").classList.toggle("hidden",!!x);
-  if(!x){$("studysummary").textContent="完成 "+studyQueue.length+" 句練習，熟悉程度與下次複習時間已更新。";focusElement("studydone");return}
-  $("studynum").textContent="第 "+(studyIndex+1)+" / "+studyQueue.length+" 句";
-  $("studytag").textContent=(x.category||"General")+" · "+(x.seen?"複習":"新句子");
+  stopSpeech();const x=studyQueue[studyIndex];
+  $("studyempty").classList.toggle("hidden",!!studyQueue.length);
+  $("studyprogress").max=studyQueue.length||1;$("studyprogress").value=studyIndex;
+  $("studycount").textContent="今日學習 · "+studyQueue.length+" 項";
+  $("studybox").classList.toggle("hidden",!x);$("studydone").classList.toggle("hidden",!!x||!studyQueue.length);
+  if(!studyQueue.length){focusElement("studyempty");return}
+  if(!x){$("studysummary").textContent="完成 "+studyQueue.length+" 項練習，熟悉程度與下次複習時間已更新。";focusElement("studydone");return}
+  $("studynum").textContent="第 "+(studyIndex+1)+" / "+studyQueue.length+" 項";
+  $("studytag").textContent=(itemKind(x)==="word"?"單字與片語":"完整句子")+" · "+(x.seen?"複習":"新教材");
+  $("pronunciationtip").textContent=itemKind(x)==="word"?"先聽單字，留意重音與音節；跟讀一次，再遮住英文說一次。":"先聽完整句子，再慢速跟讀，留意重音、連音與停頓；最後遮住英文說一次。";
+  ["studyenglish","studyextra"].forEach(id=>$(id).classList.remove("hidden"));$("hideEnglish").textContent="遮住英文再說一次";
   $("studyprompt").textContent=x.chinese||"試著用英文解釋這個詞";
   $("studyenglish").textContent=x.english;$("studyextra").textContent=x.note||x.source||"";
+  $("studyExampleAudio").classList.toggle("hidden",!exampleEnglish(x));
   $("studyanswer").classList.add("hidden");$("studygrade").classList.add("hidden");$("revealBtn").classList.remove("hidden");
   focusElement("studyprompt");
 }
@@ -136,29 +163,49 @@ function revealStudy(){
   $("studyanswer").classList.remove("hidden");$("studygrade").classList.remove("hidden");$("revealBtn").classList.add("hidden");focusElement("studyenglish");
 }
 function grade(g){if(!studyQueue[studyIndex]||$("studygrade").classList.contains("hidden"))return;schedule(studyQueue[studyIndex],g);studyIndex++;renderStudy()}
-function speakCurrent(){speak(studyQueue[studyIndex]?.english)}
-function speakQuiz(){speak(quizQueue[quizIndex]?.english)}
-function speak(text){
+function toggleStudyText(){
+  const hidden=$("studyenglish").classList.toggle("hidden");$("studyextra").classList.toggle("hidden",hidden);
+  $("hideEnglish").textContent=hidden?"顯示英文":"遮住英文再說一次";
+}
+function exampleEnglish(item){
+  const example=typeof item.note==="string"?item.note.split(/[（(](?=[^()（）]*[㐀-鿿])/)[0].trim():"";
+  return /^[A-Za-z]/.test(example)&&/[.!?]["'”’)]*$/.test(example)&&!/[㐀-鿿]/.test(example)&&norm(example)!==norm(item.english)?example:"";
+}
+function speakStudyExample(rate=1){const item=studyQueue[studyIndex];if(item)speak(exampleEnglish(item),rate)}
+function speakItemExample(index,rate=1){if(data[index])speak(exampleEnglish(data[index]),rate)}
+function speakCurrent(rate=1){speak(studyQueue[studyIndex]?.english,rate)}
+function speakQuiz(rate=1){speak(quizQueue[quizIndex]?.english,rate)}
+function speakItem(index,rate=1){speak(data[index]?.english,rate)}
+function stopSpeech(){if("speechSynthesis" in window)speechSynthesis.cancel()}
+function speechMessage(message){$("speechstatus").textContent=message;$("speechstatus").classList.remove("hidden")}
+function speak(text,rate=1){
   if(!text)return;
-  if(!("speechSynthesis" in window)){ $("storageStatus").textContent="此瀏覽器不支援英文朗讀，請換用支援語音的瀏覽器。";$("storageStatus").classList.remove("hidden");return }
-  speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="en-US";utterance.rate=.86;speechSynthesis.speak(utterance);
+  if(!("speechSynthesis" in window)){speechMessage("此瀏覽器不支援英文朗讀，請換用支援語音的瀏覽器。");return}
+  $("speechstatus").classList.add("hidden");
+  try{
+    stopSpeech();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="en-US";utterance.rate=rate;
+    utterance.onerror=event=>{if(!["canceled","interrupted"].includes(event.error))speechMessage("發音播放失敗，請確認裝置音量與瀏覽器語音支援，再試一次。")};
+    speechSynthesis.speak(utterance);
+  }catch{speechMessage("目前無法播放發音，請確認瀏覽器語音支援後再試一次。")}
 }
 function focusElement(id){const element=$(id);element.tabIndex=-1;element.focus({preventScroll:true})}
-function startQuiz(){if(!data.length){showTab("import");return}quizQueue=pickQueue(10);quizIndex=0;quizRatings=[0,0,0];showTab("quiz");renderQuiz()}
+function startQuiz(){if(!data.length){showTab("import");return}quizQueue=pickQueue(10);quizIndex=0;quizRatings=[0,0,0];quizStarted=true;showTab("quiz");renderQuiz()}
 function renderQuiz(){
-  const x=quizQueue[quizIndex];quizRated=false;
-  $("quizprogress").max=quizQueue.length;$("quizprogress").value=quizIndex;
-  $("quizbox").classList.toggle("hidden",!x);$("quizdone").classList.toggle("hidden",!!x);
+  stopSpeech();const x=quizQueue[quizIndex];quizRated=false;
+  $("quizempty").classList.toggle("hidden",!!quizQueue.length);
+  $("quizprogress").max=quizQueue.length||1;$("quizprogress").value=quizIndex;
+  $("quizbox").classList.toggle("hidden",!x);$("quizdone").classList.toggle("hidden",!!x||!quizQueue.length);
+  if(!quizQueue.length){focusElement("quizempty");return}
   if(!x){
-    $("quizsummary").textContent="你完成了 "+quizQueue.length+" 句主動回想。";
-    $("quizbreakdown").textContent="能表達 "+quizRatings[2]+" 句 · 再練習 "+quizRatings[1]+" 句 · 待複習 "+quizRatings[0]+" 句";
+    $("quizsummary").textContent="你完成了 "+quizQueue.length+" 項主動回想。";
+    $("quizbreakdown").textContent="能表達 "+quizRatings[2]+" 項 · 再練習 "+quizRatings[1]+" 項 · 待複習 "+quizRatings[0]+" 項";
     focusElement("quizdone");return;
   }
-  $("quiznum").textContent="第 "+(quizIndex+1)+" / "+quizQueue.length+" 題";$("quiztag").textContent=x.category||"回想測驗";
+  $("quiznum").textContent="第 "+(quizIndex+1)+" / "+quizQueue.length+" 題";$("quiztag").textContent=itemKind(x)==="word"?"單字與片語回想":"句子回想";
   $("quizprompt").textContent=x.chinese||"請輸入英文";
   $("quizinput").value="";$("quizinput").disabled=false;$("quizinput").removeAttribute("aria-invalid");
   $("quizhelp").textContent="寫完後檢查答案；想不起來，也可以直接看參考句。";
-  ["quizresult","quizgrade","nextBtn","quizSpeak"].forEach(id=>$(id).classList.add("hidden"));
+  ["quizresult","quizgrade","nextBtn","quizSpeak","quizSlow"].forEach(id=>$(id).classList.add("hidden"));
   ["checkBtn","skipBtn"].forEach(id=>$(id).classList.remove("hidden"));
   focusElement("quizprompt");
 }
@@ -170,7 +217,7 @@ function checkQuiz(skip=false){
   $("quizanswer").textContent=x.english;
   $("quizfeedback").textContent=skip?"沒關係，先跟讀一次，再評估自己對這一句的熟悉程度。":matches?"文字與參考句一致，做得很好！再試著不看答案說一次。":"你的表達與參考句不同。請對照意思與文法；如果語意正確，也可以選「我能表達」。";
   $("quizfeedback").classList.toggle("different",!matches);
-  ["quizresult","quizgrade","quizSpeak"].forEach(id=>$(id).classList.remove("hidden"));
+  ["quizresult","quizgrade","quizSpeak","quizSlow"].forEach(id=>$(id).classList.remove("hidden"));
   ["checkBtn","skipBtn"].forEach(id=>$(id).classList.add("hidden"));
   $("quizhelp").textContent="對照下方的參考句，再評估自己的熟悉程度。";
   $("quizinput").disabled=true;$("quizinput").removeAttribute("aria-invalid");focusElement("quizanswer");
@@ -183,21 +230,26 @@ function quizGrade(g){
 function nextQuiz(){if(!quizRated)return;quizIndex++;renderQuiz()}
 function renderLibrary(){
   const q=$("search").value.toLowerCase();
-  const rows=data.filter(x=>(x.english+" "+x.chinese+" "+x.category).toLowerCase().includes(q)).filter(x=>libraryFilter==="fresh"?!x.seen:libraryFilter==="due"?x.seen&&(!x.due||x.due<=localDay()):libraryFilter==="mastered"?x.level>=4:true);
-  $("librarycount").textContent=rows.length+" / "+data.length+" 句";
+  const rows=practiceItems().filter(x=>(x.english+" "+x.chinese+" "+x.category).toLowerCase().includes(q)).filter(x=>libraryFilter==="fresh"?!x.seen:libraryFilter==="due"?x.seen&&(!x.due||x.due<=localDay()):libraryFilter==="mastered"?x.level>=4:true);
+  $("librarycount").textContent=rows.length+" / "+data.length+" 項";
   $("items").innerHTML=rows.length?rows.map(x=>{
-    const level=x.level||0;
+    const level=x.level||0,index=data.indexOf(x),kind=itemKind(x);
     const dots=Array.from({length:6},(_,i)=>'<i class="'+(i<level?"filled":"")+'"></i>').join("");
-    return '<article class="item"><div class="row"><span class="tag">'+esc(x.category||"General")+'</span><span class="kbd">'+(!x.seen?"還沒學過":!x.due||x.due<=localDay()?"到期複習":"複習日 "+esc(x.due))+'</span></div><strong lang="en">'+esc(x.english)+'</strong><p class="translation">'+esc(x.chinese||"尚未提供中文提示")+'</p><div class="item-foot"><span><span class="level-dots" aria-hidden="true">'+dots+'</span>熟練 '+level+'/6</span><span>'+esc(x.source||"自行新增")+'</span></div></article>';
-  }).join(""):'<div class="empty">'+(q?"沒有找到這個句子，試試其他關鍵字。":"這裡目前沒有句子。可以切換篩選，或新增想學的教材。")+'</div>';
+    return '<article class="item"><div class="row"><span class="tag">'+esc(x.category||"General")+'</span><span class="kbd">'+(!x.seen?"還沒學過":!x.due||x.due<=localDay()?"到期複習":"複習日 "+esc(x.due))+'</span></div><strong lang="en">'+esc(x.english)+'</strong><p class="translation">'+esc(x.chinese||"尚未提供中文提示")+'</p>'+(x.note?'<details><summary>例句與補充</summary><p class="hint">'+esc(x.note)+'</p>'+(exampleEnglish(x)?'<div class="actions"><button class="btn secondary" onclick="speakItemExample('+index+',1)">例句發音</button><button class="btn outline" onclick="speakItemExample('+index+',0.7)">例句慢速跟讀</button></div>':'')+'</details>':'')+'<div class="actions"><button class="btn secondary" onclick="speakItem('+index+',1)" aria-label="播放 '+esc(x.english)+'">聽發音</button><button class="btn outline" onclick="speakItem('+index+',0.7)" aria-label="慢速播放 '+esc(x.english)+'">慢速跟讀</button><select class="item-kind" aria-label="教材類型：'+esc(x.english)+'" onchange="setItemKind('+index+',this.value)"><option value="word" '+(kind==="word"?"selected":"")+'>單字與片語</option><option value="sentence" '+(kind==="sentence"?"selected":"")+'>完整句子</option></select></div><div class="item-foot"><span><span class="level-dots" aria-hidden="true">'+dots+'</span>熟練 '+level+'/6</span><span>'+esc(x.source||"自行新增")+'</span></div></article>';
+  }).join(""):'<div class="empty">'+(q?"沒有找到這筆教材，試試其他關鍵字。":"這裡目前沒有教材。可以切換篩選，或新增想學的單字與句子。")+'</div>';
 }
 function setFilter(filter){libraryFilter=filter;document.querySelectorAll(".filter").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filter===filter)));renderLibrary()}
 function esc(x){return String(x||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function parseItems(j){let a=Array.isArray(j)?j:(j.items||j.references||j.vocabulary||j.sentences||j.data||[]);if(!Array.isArray(a))throw Error("JSON 需要包含陣列");return a.map(x=>({english:x.english||x.word||x.term||x.sentence||x.phrase||x.text||x.en,chinese:x.chinese||x.meaning||x.translation||x.zh||x.core_meaning||"",category:x.category||x.topic||"Imported",source:x.source||"English-Class",note:x.note||x.explanation||""})).filter(x=>typeof x.english==="string"&&x.english.trim())}
-function mergeItems(a){let seen=new Set(data.map(x=>norm(x.english)));let count=0;for(let x of a){if(seen.has(norm(x.english)))continue;seen.add(norm(x.english));data.push({...x,id:"import-"+Date.now()+"-"+count,level:0,due:0,seen:0});count++}save();return count}
+function parseItems(j){
+  const a=Array.isArray(j)?j:(j.items||j.references||j.vocabulary||j.sentences||j.data||[]);
+  if(!Array.isArray(a))throw Error("JSON 需要包含陣列");
+  const defaultKind=!Array.isArray(j)&&a===j.vocabulary?"word":!Array.isArray(j)&&a===j.sentences?"sentence":undefined;
+  return a.map(x=>({english:x.english||x.word||x.term||x.sentence||x.phrase||x.text||x.en,chinese:x.chinese||x.meaning||x.translation||x.zh||x.core_meaning||"",category:x.category||x.topic||"Imported",source:x.source||"English-Class",note:x.note||x.explanation||"",kind:["word","sentence"].includes(x.kind)?x.kind:x.word||x.term||x.phrase?"word":x.sentence?"sentence":defaultKind})).filter(x=>typeof x.english==="string"&&x.english.trim());
+}
+function mergeItems(a){let seen=new Set(data.map(x=>norm(x.english)));let count=0;for(let x of a){if(seen.has(norm(x.english)))continue;seen.add(norm(x.english));data.push({...x,id:"import-"+Date.now()+"-"+count,level:0,due:0,seen:0});count++}if(count){studyStarted=false;quizStarted=false}save();return count}
 function importText(){try{let a=parseItems(JSON.parse($("jsoninput").value));let n=mergeItems(a);$("importstatus").textContent="成功新增 "+n+" 筆（已跳過重複內容）。"}catch(e){$("importstatus").textContent="匯入失敗："+e.message}}
 function importFile(e){let f=e.target.files[0];if(!f)return;f.text().then(t=>{$("jsoninput").value=t;importText()}).catch(err=>$("importstatus").textContent=err.message);e.target.value=""}
 function exportData(){let blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),items:data},null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="english-forge-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-function addItem(){let english=$("newen").value.trim(),chinese=$("newzh").value.trim();if(!english||!chinese){$("importstatus").textContent="請同時輸入英文和中文。";return}let n=mergeItems([{english,chinese,category:"Manual",source:"Manual"}]);$("importstatus").textContent=n?"已新增句子。":"已有相同句子。";$("newen").value="";$("newzh").value=""}
+function addItem(){let english=$("newen").value.trim(),chinese=$("newzh").value.trim();if(!english||!chinese){$("importstatus").textContent="請同時輸入英文和中文。";return}let n=mergeItems([{english,chinese,category:"Manual",source:"Manual",...(["word","sentence"].includes($("newkind").value)?{kind:$("newkind").value}:{})}]);$("importstatus").textContent=n?"已新增句子。":"已有相同句子。";$("newen").value="";$("newzh").value=""}
 renderHome();
 </script><script type="module" src="./firebase-sync.js?v=20261014-2"></script></body></html>

@@ -10,7 +10,9 @@ A mobile-friendly, local-first English practice app hosted on GitHub Pages.
 - Library filters for new, due, and familiar sentences (due counts exclude unstudied items)
 - Daily practice: Monday–Friday two new items, with review; Saturday weekly recall; Sunday long-term review
 - Chinese-to-English active recall and self-assessment
-- English text-to-speech (browser speech synthesis)
+- Separate vocabulary/phrase, sentence, and mixed practice modes across flashcards, quizzes, and the library
+- Normal-speed and slow English text-to-speech, plus hide-and-recall shadowing (browser speech synthesis)
+- Editable material types in the library; changing a type keeps existing review progress
 - Difficulty-based review intervals: 0, 1, 3, 7, 14, 30, 60 days
 - Searchable vocabulary/sentence library
 - JSON import with duplicate detection and JSON progress backup
@@ -23,7 +25,7 @@ When Pages is enabled, the expected URL is:
 https://greamown.github.io/english-forge/
 
 ## Checks
-Run `node --test tests/learning.test.cjs` (Node.js 18+; no dependencies). These checks cover session restart, direct navigation, answer/skip handling, review counts, self-assessment, and library filtering.
+Run `node --test tests/learning.test.cjs` (Node.js 18+; no dependencies). These checks cover session restart, direct navigation, answer/skip handling, review counts, self-assessment, library filtering, material types, shadowing, and speech error handling.
 
 ## Import format
 ```json
@@ -38,6 +40,10 @@ Run `node --test tests/learning.test.cjs` (Node.js 18+; no dependencies). These 
 ```
 
 The importer also accepts objects with `items`, `references`, `vocabulary`, or `sentences` arrays, plus common aliases for English and Chinese fields.
+
+An optional `kind` field accepts `"word"` (including phrases) or `"sentence"`. Imports under `vocabulary` and `sentences` retain that type. Untyped items use sentence-ending punctuation as a first pass; correct ambiguous items with the type selector in the library. Existing browser data needs no migration.
+
+For pronunciation practice, reveal a flashcard, listen at normal speed, use slow playback to shadow it, then hide the English and say it again. Bilingual examples in material notes also have normal/slow playback; only the English portion is spoken. Words focus on stress and syllables; sentences focus on rhythm, linking, and pauses. This is self-assessed practice, not microphone pronunciation scoring.
 
 ## Privacy and limitations
 - All added content and practice progress are stored in the current browser's `localStorage`.
