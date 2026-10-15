@@ -1,0 +1,177 @@
+{
+  "language": "ja",
+  "sourceUrl": "https://app.notion.com/p/283819ec9e8c80f086ddd8f8d30f8e83",
+  "sourceUpdatedAt": "2026-10-15T01:57:06.461Z",
+  "items": [
+    {
+      "japanese": "はじめまして",
+      "reading": "はじめまして",
+      "romaji": "hajimemashite",
+      "chinese": "初次見面。",
+      "kind": "sentence",
+      "category": "日常",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "よろしくお願いします",
+      "reading": "よろしく おねがいします",
+      "romaji": "yoroshiku onegaishimasu",
+      "chinese": "請多多指教。",
+      "kind": "sentence",
+      "category": "日常",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "私は Will です",
+      "reading": "わたしは Will です",
+      "romaji": "watashi wa Will desu",
+      "chinese": "我是 Will。",
+      "kind": "sentence",
+      "category": "日常",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "これからお世話になります",
+      "reading": "これから おせわに なります",
+      "romaji": "kore kara osewa ni narimasu",
+      "chinese": "今後要麻煩您多多照顧。",
+      "kind": "sentence",
+      "category": "日常",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "コーヒーを一杯ください。",
+      "reading": "コーヒーを いっぱい ください",
+      "romaji": "koohii o ippai kudasai",
+      "chinese": "請給我一杯咖啡。",
+      "kind": "sentence",
+      "category": "餐飲",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "アイスでもいいですか？",
+      "reading": "アイスでも いいですか",
+      "romaji": "aisu demo ii desu ka",
+      "chinese": "冰的也可以嗎？",
+      "kind": "sentence",
+      "category": "餐飲",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "砂糖を入れてください。",
+      "reading": "さとうを いれてください",
+      "romaji": "satou o irete kudasai",
+      "chinese": "請幫我加糖。",
+      "kind": "sentence",
+      "category": "餐飲",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "持ち帰りでお願いします",
+      "reading": "もちかえりで おねがいします",
+      "romaji": "mochikaeri de onegaishimasu",
+      "chinese": "請幫我外帶。",
+      "kind": "sentence",
+      "category": "餐飲",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "チェックインをお願いします",
+      "reading": "チェックインを おねがいします",
+      "romaji": "chekku in o onegaishimasu",
+      "chinese": "我想辦理入住（報到）。",
+      "kind": "sentence",
+      "category": "住宿",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "予約があります",
+      "reading": "よやくが あります",
+      "romaji": "yoyaku ga arimasu",
+      "chinese": "我有預約。",
+      "kind": "sentence",
+      "category": "住宿",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "搭乗口はどこですか。",
+      "reading": "とうじょうぐちは どこですか",
+      "romaji": "toujouguchi wa doko desu ka",
+      "chinese": "登機口在哪裡？",
+      "kind": "sentence",
+      "category": "機場",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "荷物を預けてもらえますか。",
+      "reading": "にもつを あずけて もらえますか",
+      "romaji": "nimotsu o azukete moraemasu ka",
+      "chinese": "可以幫我寄放行李嗎？",
+      "kind": "sentence",
+      "category": "住宿",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "今日は暑いで",
+      "reading": "きょうはあついです",
+      "romaji": "kyou wa atsui desu",
+      "chinese": "今天很熱。",
+      "kind": "sentence",
+      "category": "日常",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "Notion 原文標題為「今日は暑いで」；讀音使用「きょうはあついです」，可能漏字。中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "水が飲みたいです",
+      "reading": "みずがのみたいです",
+      "romaji": "mizu ga nomitai desu",
+      "chinese": "我想喝水。",
+      "kind": "sentence",
+      "category": "日常",
+      "source": "Notion Japan · 2026-09-21",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "レイトチェックアウトはできますか?",
+      "reading": "れいとちぇっくあうとはできますか？",
+      "romaji": "reito chekkuauto wa dekimasuka?",
+      "chinese": "可以延後退房嗎？",
+      "kind": "sentence",
+      "category": "住宿",
+      "source": "Notion Japan · 2026-10-05",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "朝食は何時からですか?",
+      "reading": "ちょうしょくはなんじからですか?",
+      "romaji": "chou-shoku wa nan-ji kara desu ka?",
+      "chinese": "早餐幾點開始？",
+      "kind": "sentence",
+      "category": "住宿",
+      "source": "Notion Japan · 2026-10-05",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    },
+    {
+      "japanese": "クレジットカードは使えますか",
+      "reading": "くれじっとかあど は つかえますか",
+      "romaji": "ku re ji tto kaa do - wa tsu ka e ma su ka.",
+      "chinese": "可以使用信用卡嗎？",
+      "kind": "sentence",
+      "category": "付款",
+      "source": "Notion Japan · 2026-10-12",
+      "note": "中文為匯入時補充翻譯，非 Notion 原文。"
+    }
+  ]
+}

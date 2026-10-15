@@ -101,3 +101,14 @@ The UI has Google sign-in and manual Firestore backup/restore controls. **They r
 - If you want only one authorized Google account, configure an email/UID allowlist in Firebase Rules after your first sign-in.
 - `firebase-config.js` is visible publicly; this is normal for Firebase client SDK configuration. Database access must be protected by Firestore Rules.
 - The existing `reference/*.json` files have already been committed to a **public repository**, so they are public (including in Git history). Moving them to Firestore later does not erase that public history.
+
+
+## Notion 日文教材（2026-10-15）
+
+- 來源：[Notion · Japan](https://app.notion.com/p/283819ec9e8c80f086ddd8f8d30f8e83)，最後取得日期 2026-10-15。
+- 匯入檔：[reference/japanese-notion-20261015.json](reference/japanese-notion-20261015.json)，共 **17 句**，依原始 Notion 週次保留 `source`，並包含假名、羅馬字、繁中回想提示。
+- **匯入方式**：開啟 [日文練習](https://greamown.github.io/lingua-forge/practice.html?lang=ja) →「教材與備份」→ 選擇上方 JSON 檔案匯入。GitHub Pages 不會因為新增靜態 JSON 檔就自動寫入瀏覽器 `localStorage`；各裝置須各自匯入，或使用原有備份功能。
+- Notion 未提供中文翻譯；本檔的 `chinese` 為額外編寫，方便既有中文提示／回想測驗運作。
+- 來源中「今日は暑いで」與假名「きょうはあついです」不完全一致；為忠實保留來源，JSON 保留原文並加上提示，匯入前可人工修訂。
+- 額外參考連結： [Hahow 課程](https://hahow.in/courses/6031136edd9bc1681035b892)、[JapanEx 制縣等級](https://zhung.com.tw/japanex/)、[MainichiJP 星期記憶影片](https://www.instagram.com/reel/DVdVeMzD74_/)。
+- 星期讀音（Notion）：月火水木金土日 → げつ / か / すい / もく / きん / ど / にち。此項保存在文件而非句子練習題庫中。
