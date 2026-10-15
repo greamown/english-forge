@@ -1,4 +1,4 @@
-# LinguaForge · 語言練習手帳
+# LinguaForge · Language Practice Journal
 
 Build your English intuition, one sentence at a time.
 
@@ -93,7 +93,7 @@ The UI has Google sign-in and manual Firestore backup/restore controls. **They r
 3. In **Build → Authentication → Sign-in method**, enable **Google** and configure the support email.
 4. In **Authentication → Settings → Authorized domains**, add `greamown.github.io` (and localhost for testing if needed).
 5. In **Build → Firestore Database**, create the database, then copy the contents of `firestore.rules` into the **Rules** editor and click **Publish**. Do not leave Firestore in test mode.
-6. Deploy the changes to GitHub Pages, open **教材與備份**, sign in with Google, and use **備份到雲端**. Use **從雲端還原** carefully; it overwrites local data.
+6. Deploy the changes to GitHub Pages, open **Materials & Backups**, sign in with Google, and use **Back Up to Cloud**. Use **Restore from Cloud** carefully; it overwrites local data. These labels appear in Chinese in the app.
 
 ### Security notes
 - Database reads/writes are scoped to `users/{request.auth.uid}/backups/latest` by Firestore rules.
