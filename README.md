@@ -8,7 +8,7 @@ The homepage offers two entries: English keeps the existing EnglishForge experie
 
 ## Features
 - Language selector homepage with separate English (`practice.html?lang=en`) and Japanese (`practice.html?lang=ja`) learning spaces
-- Independent local study records, JSON backups, and manual cloud backup fields for each language
+- Independent local study records, JSON backups, and automatic cloud sync for each language, with first/last practice times per item
 - Warm paper-and-green learning journal layout, with responsive mobile navigation and keyboard focus indicators
 - Guided flashcards, session progress, restartable completion screens, and quiz self-assessment summaries
 - Library filters for new, due, and familiar sentences (due counts exclude unstudied items)
@@ -35,7 +35,7 @@ Run `node --test tests/*.test.cjs` (Node.js 18+; no dependencies). These checks 
 
 English retains the existing `english-forge-v1` browser storage key, so existing records carry over. Japanese uses `japanese-forge-v1` and starts with 10 independent introductory examples. Returning to the language selector never merges or deletes progress.
 
-Cloud backups keep the original English `items`/`updatedAt` fields under `users/{uid}/backups/latest`, and store Japanese in `japaneseItems`/`japaneseUpdatedAt`. Both upload paths use [Firestore field merging](https://firebase.google.com/docs/firestore/manage-data/add-data#set_a_document), so backing up one language preserves the other. Existing rules and old English cloud backups remain compatible. An older deployed client can still replace the whole backup document; refresh open tabs to this version before using cloud backup.
+Cloud sync stores English in `englishRecords` and Japanese in `japaneseRecords` (each a JSON string, which avoids Firestore's 20,000-fields-per-document limit) under `users/{uid}/backups/latest`; each write touches only its own field, so syncing one language preserves the other. Records are keyed by the same normalized text that skips duplicate imports, so a lesson imported on two devices stays one item. Each item keeps its own record with the time it last changed (unmarking or clearing writes a dated removal record too). Once signed in with Google, the page syncs automatically: on sign-in, about 1.5 seconds after each change, and when the tab is hidden or shown again. A sync reads the cloud copy, keeps the newer record for each item, and writes the result back in one Firestore transaction, so progress from different devices on the same account is combined rather than overwritten. Device clocks decide which change is newer. Older whole-snapshot backups are merged in once (dated by their upload time) and then removed. Existing rules remain compatible. All apps share this one Firestore document, which Firestore caps at 1 MiB; if the libraries grow large, give each app its own document and update `firestore.rules`.
 
 ## Import format
 ```json
@@ -71,7 +71,7 @@ For pronunciation practice, reveal a flashcard, listen at normal speed, use slow
 
 ## Privacy and limitations
 - All added content and practice progress are stored in the current browser's `localStorage`.
-- Progress is not automatically synchronized between browsers or devices; export JSON backups regularly or use the optional manual Firebase backup controls.
+- Progress syncs between devices only when signed in with Google; otherwise export JSON backups regularly.
 - The website does not access Gmail, and no Gmail tokens or private email bodies are committed to this repository.
 - Gmail content can be transformed into a reviewable JSON reference dataset in ChatGPT and then imported into this app.
 - Answer checks compare normalized strings; alternative correct expressions require your own judgment.
@@ -81,19 +81,18 @@ For pronunciation practice, reveal a flashcard, listen at normal speed, use slow
 ## Next steps
 - Curate and import the rest of the English-Class learning reference.
 - Add smarter answer checking and English interview scenarios.
-- Consider authenticated private sync if cross-device access becomes important.
 
 
-## Firebase private cloud backup (optional)
+## Firebase private cloud sync (optional)
 
-The UI has Google sign-in and manual Firestore backup/restore controls. **They remain inactive until you configure your own Firebase project.** These features are not automatic multi-device sync.
+The UI has Google sign-in and automatic Firestore sync. **It remains inactive until you configure your own Firebase project.**
 
 1. Create a project at https://console.firebase.google.com/ (choose the Spark plan).
 2. Add a **Web app** under project settings and copy its Firebase SDK `firebaseConfig` into `firebase-config.js`. This config identifies the public Firebase app; never paste service-account credentials.
 3. In **Build → Authentication → Sign-in method**, enable **Google** and configure the support email.
 4. In **Authentication → Settings → Authorized domains**, add `greamown.github.io` (and localhost for testing if needed).
 5. In **Build → Firestore Database**, create the database, then copy the contents of `firestore.rules` into the **Rules** editor and click **Publish**. Do not leave Firestore in test mode.
-6. Deploy the changes to GitHub Pages, open **Materials & Backups**, sign in with Google, and use **Back Up to Cloud**. Use **Restore from Cloud** carefully; it overwrites local data. These labels appear in Chinese in the app.
+6. Deploy the changes to GitHub Pages, open **Materials & Backups**, and sign in with Google. Progress then syncs automatically; **Sync Now** forces a sync. These labels appear in Chinese in the app.
 
 ### Security notes
 - Database reads/writes are scoped to `users/{request.auth.uid}/backups/latest` by Firestore rules.

@@ -26,7 +26,7 @@ function app(language = "en", stored = new Map()) {
     window: { scrollTo() {}, addEventListener() {} },
     location: { search: "?lang=" + language }, URLSearchParams, NodeFilter: { SHOW_TEXT: 4 },
     localStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) },
-    Intl, Date, console,
+    Intl, Date, console, ProgressRecords: require('../progress-records.js'),
   });
   vm.runInContext(script, context);
   return { run: code => vm.runInContext(code, context), el: id => elements.get(id) };
