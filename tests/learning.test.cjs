@@ -107,6 +107,13 @@ test('storage failure shows a visible warning instead of hiding lost persistence
   assert.match(a.el('storageStatus').textContent, /下載備份/);
 });
 
+test('saving learning progress marks the cloud copy as needing a backup', () => {
+  const a = app();
+  a.run('window.markForgeDataDirty=value=>window.lastDirtyAt=value;save()');
+  assert.ok(Number(a.run('localStorage.getItem(KEY+"-updated-at")')) > 0);
+  assert.ok(a.run('window.lastDirtyAt') > 0);
+});
+
 test('practice kind separates vocabulary and sentences while honoring an explicit kind', () => {
   const a = app();
   assert.equal(a.run('itemKind({english:"perfume"})'), 'word');
