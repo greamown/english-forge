@@ -72,7 +72,7 @@ test('each item records when it was first and last practiced', () => {
   assert.ok(first > 0);
   assert.equal(d.run('data[0].lastStudiedAt'), first);
   d.run('renderLibrary()');
-  assert.match(d.el('items').innerHTML, /上次練習 /);
+  assert.match(d.el('items').innerHTML, /練習 1 次 · 首次 .+ · 上次 /);
   const records = JSON.parse(d.stored.get('english-forge-v1-records'));
   assert.equal(Object.values(records).find(r => r.english === d.run('data[0].english')).lastStudiedAt, first);
 });

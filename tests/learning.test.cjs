@@ -324,3 +324,23 @@ test('Japanese cards hide the translation provenance notice and preserve other n
     assert.equal(a.run('data[0].note'), extra + notice);
   }
 });
+
+test('reimporting English fills incomplete examples without touching complete ones or progress', () => {
+  const a = app();
+  a.run('data=[{english:"tent",chinese:"帳篷",note:"We set up our tent.",level:3,seen:1},{english:"perfume",chinese:"香水",note:"She wears perfume.（她擦香水。）"}]');
+  a.run('mergeItems(parseItems([{english:"tent",example:"We set up our tent.（我們搭好帳篷。）"},{english:"perfume",note:"Other.（別的。）"}]))');
+  assert.equal(a.run('data[0].note'), 'We set up our tent.（我們搭好帳篷。）');
+  assert.equal(a.run('data[0].level'), 3);
+  assert.equal(a.run('data[1].note'), 'She wears perfume.（她擦香水。）');
+  assert.equal(a.run('exampleEnglish({english:"x",note:"\\"On time\\" means not late.（準時。）"})'), '"On time" means not late.');
+});
+
+test('library and study card show practice count and times', () => {
+  const a = app();
+  a.run('data[0].seen=2;data[0].level=1;data[0].due="2000-01-01";data[1].seen=1;data[1].due="2999-01-01";data[1].firstStudiedAt=data[1].lastStudiedAt=Date.UTC(2026,9,17,9,0);showTab("library")');
+  const html = a.el('items').innerHTML;
+  assert.match(html, /練習 2 次</);
+  assert.match(html, /練習 1 次 · 首次 .+ · 上次 /);
+  a.run('studyQueue=[data[1]];studyIndex=0;renderStudy()');
+  assert.match(a.el('studytag').textContent, /複習 · 上次 /);
+});

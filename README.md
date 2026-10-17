@@ -67,6 +67,8 @@ The importer also accepts objects with `items`, `references`, `vocabulary`, or `
 
 An optional `kind` field accepts `"word"` (including phrases) or `"sentence"`. Imports under `vocabulary` and `sentences` retain that type. Untyped items use sentence-ending punctuation as a first pass; correct ambiguous items with the type selector in the library. Existing browser data needs no migration.
 
+English notes use the form `Example sentence.（中文翻譯。）`; `example` is accepted when `note` is absent. Reimporting the same English text replaces a missing or incomplete example (no playable sentence or no Chinese), leaving complete notes and progress untouched.
+
 For pronunciation practice, reveal a flashcard, listen at normal speed, use slow playback to shadow it, then hide the English and say it again. Bilingual examples in material notes also have normal/slow playback; only the English portion is spoken. Words focus on stress and syllables; sentences focus on rhythm, linking, and pauses. This is self-assessed practice, not microphone pronunciation scoring.
 
 ## Privacy and limitations
